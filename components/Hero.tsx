@@ -37,11 +37,7 @@ export default function Hero() {
         </div>
 
         <div style={{borderRadius:'14px',overflow:'hidden',background:'#f7f7f7',border:'1px solid #e5e5e5',aspectRatio:'4/3',position:'relative',display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <div style={{textAlign:'center',color:'#777',fontSize:'0.85rem',padding:'24px'}}>
-            <div style={{fontSize:'3rem',marginBottom:'12px'}}>🚐</div>
-            <strong style={{display:'block',color:'#1c1c1c',marginBottom:'6px'}}>Add your ute photo here</strong>
-            Upload via the CMS at /admin
-          </div>
+          <img src="/images/Ute.png" alt="NWP Plumbing ute" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
           <div style={{position:'absolute',bottom:0,left:0,right:0,background:'rgba(255,255,255,0.95)',borderTop:'1px solid #e5e5e5',display:'flex'}}>
             {[['$0','Call-out fee on quoted jobs'],['24/7','Emergency response'],['Fixed','Price agreed before we start']].map(([val,label],i) => (
               <div key={i} style={{flex:1,padding:'14px 16px',textAlign:'center',borderRight:i<2?'1px solid #e5e5e5':'none'}}>
