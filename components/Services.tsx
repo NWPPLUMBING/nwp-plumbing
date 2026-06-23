@@ -44,9 +44,7 @@ export default function Services() {
         <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'14px',marginTop:'32px'}}>
           {services.map((s, i) => (
             <a key={i} href="#contact" style={{border:'1.5px solid #e5e5e5',borderRadius:'10px',padding:'24px 22px',textDecoration:'none',background:'#fff',display:'flex',flexDirection:'column',transition:'border-color 0.18s'}}>
-              <div style={{fontSize:'0.75rem',fontWeight:600,color:'#a4151a',letterSpacing:'0.04em',textTransform:'uppercase',marginBottom:'8px'}}>
-                Fixed quote, $0 call-out when work proceeds
-              </div>
+
               <div style={{fontSize:'1.05rem',fontWeight:700,color:'#1c1c1c',marginBottom:'10px'}}>{s.title}</div>
               <p style={{fontSize:'0.875rem',color:'#444',lineHeight:1.6,flex:1}}>{s.desc}</p>
               <div style={{marginTop:'20px',fontSize:'0.82rem',fontWeight:600,color:'#a4151a',display:'flex',alignItems:'center',gap:'5px'}}>
