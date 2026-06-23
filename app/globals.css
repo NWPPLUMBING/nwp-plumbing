@@ -1,26 +1,75 @@
-@import "tailwindcss";
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --red: #a4151a;
+  --red-dark: #831015;
+  --red-bg: #fdf2f2;
+  --dark: #1c1c1c;
+  --mid: #444444;
+  --muted: #555555;
+  --border: #e5e5e5;
+  --bg-alt: #f7f7f7;
+  --white: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--mid);
+  background: var(--white);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+.wrap { max-width: 1320px; margin: 0 auto; padding: 0 40px; }
+.section { padding: 56px 0; }
+.section--alt { background: var(--bg-alt); }
+
+h1, h2, h3, h4 { color: var(--dark); line-height: 1.2; }
+h1 { font-size: clamp(1.6rem, 4.5vw, 3rem); font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.4rem, 3vw, 2.1rem); font-weight: 700; letter-spacing: -0.015em; }
+h3 { font-size: 1.1rem; font-weight: 600; }
+p { color: var(--mid); }
+
+.eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 13px 24px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.12s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--red { background: var(--red); color: var(--white); }
+.btn--red:hover { background: var(--red-dark); }
+.btn--outline { background: transparent; color: var(--dark); border: 1.5px solid var(--border); }
+.btn--outline:hover { border-color: var(--dark); background: var(--bg-alt); }
+.btn--outline-white { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.35); }
+.btn--outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+
+@media (max-width: 960px) {
+  .wrap { padding: 0 20px; }
+  .section { padding: 40px 0; }
+}
+
+@media (max-width: 600px) {
+  .wrap { padding: 0 16px; }
+  .section { padding: 36px 0; }
 }

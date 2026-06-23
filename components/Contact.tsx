@@ -1,0 +1,96 @@
+'use client'
+import { useState } from 'react'
+
+export default function Contact() {
+  const [submitted, setSubmitted] = useState(false)
+
+  return (
+    <section className="section" id="contact">
+      <div className="wrap" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'48px',alignItems:'start'}}>
+        
+        <div>
+          <span className="eyebrow">Get in touch</span>
+          <h2>Get a fixed quote, free and no obligation</h2>
+          <p style={{marginTop:'10px',marginBottom:'32px',maxWidth:'420px'}}>
+            Fill in the form and Nathan will call you back, talk through the job and give you a written price. No surprise costs, no pressure to proceed. Usually back to you within a couple of hours.
+          </p>
+
+          {[
+            {icon:'📞',label:'Call or SMS',val:'0477 160 911',href:'tel:+61477160911'},
+            {icon:'✉️',label:'Email',val:'nwpplumbing@outlook.com',href:'mailto:nwpplumbing@outlook.com'},
+            {icon:'🕐',label:'Hours',val:'Mon-Sun, 24/7',href:null},
+          ].map((row, i) => (
+            <div key={i} style={{display:'flex',gap:'14px',alignItems:'flex-start',padding:i===0?'0 0 18px':'18px 0',borderBottom:i<2?'1px solid #e5e5e5':'none'}}>
+              <div style={{width:'38px',height:'38px',borderRadius:'8px',background:'#fdf2f2',border:'1px solid #f5c0c0',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,fontSize:'1rem'}}>
+                {row.icon}
+              </div>
+              <div>
+                <div style={{fontSize:'0.75rem',textTransform:'uppercase',letterSpacing:'0.07em',fontWeight:700,color:'#555',marginBottom:'2px'}}>{row.label}</div>
+                {row.href ? (
+                  <a href={row.href} style={{fontWeight:700,color:'#1c1c1c',textDecoration:'none',fontSize:'1.1rem'}}>{row.val}</a>
+                ) : (
+                  <span style={{fontWeight:600,color:'#1c1c1c'}}>{row.val}</span>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{background:'#fff',border:'1.5px solid #e5e5e5',borderRadius:'12px',padding:'32px'}}>
+          <h3 style={{marginBottom:'24px'}}>Request a quote</h3>
+          
+          {submitted ? (
+            <div style={{textAlign:'center',padding:'40px 20px'}}>
+              <div style={{fontSize:'3rem',marginBottom:'16px'}}>✅</div>
+              <h3 style={{color:'#1c1c1c',marginBottom:'8px'}}>Thanks, we will be in touch soon!</h3>
+              <p style={{color:'#444',fontSize:'0.95rem'}}>Nathan will call you back usually within a couple of hours.</p>
+            </div>
+          ) : (
+            <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true) }}>
+              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'14px',marginBottom:'14px'}}>
+                <div>
+                  <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Name</label>
+                  <input type="text" placeholder="Your name" required style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}} />
+                </div>
+                <div>
+                  <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Phone</label>
+                  <input type="tel" placeholder="0400 000 000" required style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}} />
+                </div>
+              </div>
+              <div style={{marginBottom:'14px'}}>
+                <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Email</label>
+                <input type="email" placeholder="your@email.com" style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}} />
+              </div>
+              <div style={{marginBottom:'14px'}}>
+                <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Suburb</label>
+                <input type="text" placeholder="e.g. Manly, Parramatta" style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}} />
+              </div>
+              <div style={{marginBottom:'14px'}}>
+                <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Service needed</label>
+                <select required style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none',background:'#fff'}}>
+                  <option value="">Select a service</option>
+                  <option>Blocked Drain</option>
+                  <option>Hot Water System</option>
+                  <option>Burst Pipe or Leak</option>
+                  <option>Taps and Toilets</option>
+                  <option>Gas Fitting</option>
+                  <option>Emergency Plumbing</option>
+                  <option>Whole Home Filtration</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div style={{marginBottom:'14px'}}>
+                <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Tell us about the problem</label>
+                <textarea placeholder="Describe what is happening" style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none',minHeight:'100px',resize:'vertical'}} />
+              </div>
+              <button type="submit" style={{width:'100%',background:'#a4151a',color:'#fff',fontFamily:'inherit',fontWeight:700,fontSize:'1rem',border:'none',borderRadius:'6px',padding:'14px',cursor:'pointer',marginTop:'6px'}}>
+                Send quote request
+              </button>
+            </form>
+          )}
+        </div>
+
+      </div>
+    </section>
+  )
+}
