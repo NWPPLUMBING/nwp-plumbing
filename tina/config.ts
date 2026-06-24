@@ -13,7 +13,6 @@ export default defineConfig({
   build: {
     outputFolder: "admin",
     publicFolder: "public",
-    skipHydration: true,
   },
   media: {
     tina: {
