@@ -1,6 +1,5 @@
 import { defineConfig } from "tinacms";
 
-// Your hosting provider likely exposes this as an environment variable
 const branch =
   process.env.GITHUB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
@@ -9,34 +8,117 @@ const branch =
 
 export default defineConfig({
   branch,
-
-  // Get this from tina.io
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
   token: process.env.TINA_TOKEN,
-
   build: {
     outputFolder: "admin",
     publicFolder: "public",
   },
-  // Uncomment to allow cross-origin requests from non-localhost origins
-  // during local development (e.g. GitHub Codespaces, Gitpod, Docker).
-  // Use 'private' to allow all private-network IPs (WSL2, Docker, etc.)
-  // server: {
-  //   allowedOrigins: ['https://your-codespace.github.dev'],
-  // },
   media: {
     tina: {
       mediaRoot: "",
       publicFolder: "public",
     },
   },
-  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/r/content-modelling-collections/
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
+        name: "settings",
+        label: "Business Details",
+        path: "content/settings",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            type: "string",
+            name: "phone",
+            label: "Phone Number",
+          },
+          {
+            type: "string",
+            name: "email",
+            label: "Email Address",
+          },
+          {
+            type: "string",
+            name: "hours",
+            label: "Business Hours",
+          },
+        ],
+      },
+      {
+        name: "hero",
+        label: "Homepage Hero",
+        path: "content/hero",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            type: "string",
+            name: "heading1",
+            label: "Heading Line 1",
+          },
+          {
+            type: "string",
+            name: "heading2",
+            label: "Heading Line 2",
+          },
+          {
+            type: "string",
+            name: "heading3",
+            label: "Heading Line 3 (red)",
+          },
+          {
+            type: "string",
+            name: "subtext",
+            label: "Paragraph text",
+            ui: {
+              component: "textarea",
+            },
+          },
+        ],
+      },
+      {
+        name: "services",
+        label: "Services",
+        path: "content/services",
+        format: "json",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Service Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Description",
+            ui: {
+              component: "textarea",
+            },
+          },
+          {
+            type: "string",
+            name: "cta",
+            label: "Button Text",
+          },
+        ],
+      },
+      {
+        name: "posts",
+        label: "Blog Posts",
         path: "content/posts",
         fields: [
           {
@@ -53,10 +135,6 @@ export default defineConfig({
             isBody: true,
           },
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
       },
     ],
   },
