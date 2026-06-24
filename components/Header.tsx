@@ -16,7 +16,7 @@ export default function Header() {
         <div className="wrap" style={{display:'flex',alignItems:'center',justifyContent:'space-between',height:'76px',gap:'32px'}}>
           
           <a href="/" style={{display:'flex',alignItems:'center',gap:'10px',textDecoration:'none',flexShrink:0}}>
-<div style={{width:'58px',height:'58px',borderRadius:'50%',overflow:'hidden',flexShrink:0}}>
+<div style={{width:'80px',height:'80px',borderRadius:'50%',overflow:'hidden',flexShrink:0}}>
               <img src="/images/logo.png" alt="NWP Plumbing logo" style={{width:'100%',height:'100%',objectFit:'contain',display:'block'}} />
             </div>
             <div style={{lineHeight:1}}>
