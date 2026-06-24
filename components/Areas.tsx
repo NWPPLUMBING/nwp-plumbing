@@ -1,3 +1,5 @@
+import fs from 'fs'
+import path from 'path'
 const suburbs = [
   'Manly','Balgowlah','Frenchs Forest','Cremorne','Stanmore','Enmore',
   'Strathfield','Liverpool','Bankstown','Milperra','Fairfield','Eastern Creek',
@@ -6,6 +8,8 @@ const suburbs = [
 ]
 
 export default function Areas() {
+  const settingsPath = path.join(process.cwd(), 'content/settings/main.json')
+  const settings = JSON.parse(fs.readFileSync(settingsPath, 'utf-8'))
   return (
     <>
       <style>{`
@@ -34,9 +38,9 @@ export default function Areas() {
               Fastest way to get a fixed quote and lock in a time. Call or message Nathan directly.
             </p>
             {[
-              {icon:'📞',label:'Call or SMS',val:'0477 160 911',href:'tel:+61477160911'},
-              {icon:'✉️',label:'Email',val:'nwpplumbing@outlook.com',href:'mailto:nwpplumbing@outlook.com'},
-              {icon:'🕐',label:'Hours',val:'Mon-Sun, 24/7',href:null},
+              {icon:'📞',label:'Call or SMS',val:settings.phone,href:`tel:+61${settings.phone.replace(/\s/g,'')}`},
+{icon:'✉️',label:'Email',val:settings.email,href:`mailto:${settings.email}`},
+{icon:'🕐',label:'Hours',val:settings.hours,href:null},
             ].map((row,i)=>(
               <div key={i} style={{display:'flex',gap:'12px',alignItems:'center',padding:'14px 0',borderBottom:i<2?'1px solid rgba(255,255,255,0.08)':'none'}}>
                 <div style={{width:'38px',height:'38px',borderRadius:'8px',background:'rgba(164,21,26,0.25)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,fontSize:'1rem'}}>{row.icon}</div>

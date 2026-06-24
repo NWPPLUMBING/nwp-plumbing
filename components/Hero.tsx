@@ -1,4 +1,13 @@
+import fs from 'fs'
+import path from 'path'
+
 export default function Hero() {
+  const heroPath = path.join(process.cwd(), 'content/hero/main.json')
+  const settingsPath = path.join(process.cwd(), 'content/settings/main.json')
+  
+  const hero = JSON.parse(fs.readFileSync(heroPath, 'utf-8'))
+  const settings = JSON.parse(fs.readFileSync(settingsPath, 'utf-8'))
+
   return (
     <>
       <style>{`
@@ -26,24 +35,24 @@ export default function Hero() {
             </div>
 
             <h1 style={{marginBottom:'18px'}}>
-              Welcome to<br />
-              NWP Plumbing.<br />
-              <span style={{color:'#a4151a'}}>You will know the price before I start.</span>
+              {hero.heading1}<br />
+              {hero.heading2}<br />
+              <span style={{color:'#a4151a'}}>{hero.heading3}</span>
             </h1>
 
             <p style={{fontSize:'1.05rem',color:'#444',lineHeight:1.7,marginBottom:'28px',maxWidth:'560px'}}>
-              Hi, I am Nathan, founder of NWP Plumbing. Our team of fully licensed and insured plumbers are based right here in Greater Sydney. We started NWP Plumbing because we were tired of customers getting blindsided by bills they never saw coming. Every job we take on gets a fixed, itemised quote in writing before we pick up a tool. Blocked drains, hot water, burst pipes, gas fitting and more. Done properly, the first time.
+              {hero.subtext}
             </p>
 
             <div style={{display:'flex',flexWrap:'wrap',gap:'12px',marginBottom:'28px'}}>
-              <a href="tel:+61477160911" className="btn btn--red">
-                📞 Call Nathan on 0477 160 911
+              <a href={`tel:+61${settings.phone.replace(/\s/g,'')}`} className="btn btn--red">
+                📞 Call Nathan on {settings.phone}
               </a>
               <a href="#contact" className="btn btn--outline">Get a free quote</a>
             </div>
 
             <div style={{display:'flex',flexWrap:'wrap',gap:'20px',alignItems:'center',paddingTop:'28px',borderTop:'1px solid #e5e5e5'}}>
-              {['Fixed itemised quote first','$0 call-out fee on quoted jobs','Licensed and fully insured','Same-day, 24/7 emergencies'].map((item, i) => (
+              {['Fixed itemised quote first','$0 call-out fee on quoted jobs','Licensed and fully insured','Same-day, 24/7 emergencies'].map((item,i)=>(
                 <div key={i} style={{display:'flex',alignItems:'center',gap:'7px',fontSize:'0.82rem',fontWeight:600,color:'#444'}}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a4151a" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                   {item}
@@ -53,9 +62,9 @@ export default function Hero() {
           </div>
 
           <div style={{borderRadius:'14px',overflow:'hidden',background:'#f7f7f7',border:'1px solid #e5e5e5',position:'relative'}}>
-            <img src="/images/Ute.png" alt="NWP Plumbing ute" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
+            <img src="/images/Ute.png" alt="NWP Plumbing ute" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>
             <div style={{display:'flex',borderTop:'1px solid #e5e5e5',background:'rgba(255,255,255,0.95)'}}>
-              {[['$0','Call-out fee on quoted jobs'],['24/7','Emergency response'],['Fixed','Price agreed before we start']].map(([val,label],i) => (
+              {[['$0','Call-out fee on quoted jobs'],['24/7','Emergency response'],['Fixed','Price agreed before we start']].map(([val,label],i)=>(
                 <div key={i} style={{flex:1,padding:'14px 16px',textAlign:'center',borderRight:i<2?'1px solid #e5e5e5':'none'}}>
                   <div style={{fontSize:'1.3rem',fontWeight:700,color:'#a4151a',letterSpacing:'-0.02em',lineHeight:1}}>{val}</div>
                   <div style={{fontSize:'0.72rem',color:'#444',fontWeight:500,marginTop:'3px',lineHeight:1.3}}>{label}</div>
