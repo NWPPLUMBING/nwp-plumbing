@@ -76,7 +76,7 @@ export default defineConfig({
           {
             type: "string",
             name: "heading3",
-            label: "Heading Line 3 (red)",
+            label: "Heading Line 3 (red text)",
           },
           {
             type: "string",
@@ -85,54 +85,6 @@ export default defineConfig({
             ui: {
               component: "textarea",
             },
-          },
-        ],
-      },
-      {
-        name: "services",
-        label: "Services",
-        path: "content/services",
-        format: "json",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Service Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "string",
-            name: "description",
-            label: "Description",
-            ui: {
-              component: "textarea",
-            },
-          },
-          {
-            type: "string",
-            name: "cta",
-            label: "Button Text",
-          },
-        ],
-      },
-      {
-        name: "posts",
-        label: "Blog Posts",
-        path: "content/posts",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
           },
         ],
       },
