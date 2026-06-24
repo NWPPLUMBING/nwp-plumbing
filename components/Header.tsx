@@ -33,7 +33,7 @@ export default function Header() {
             </div>
             <div style={{lineHeight:1}}>
               <strong style={{display:'block',fontSize:'1rem',fontWeight:700,color:'#1c1c1c'}}>NWP Plumbing</strong>
-              <span style={{display:'block',fontSize:'0.65rem',fontWeight:600,letterSpacing:'0.1em',textTransform:'uppercase',color:'#555'}}>Greater Sydney</span>
+              <span style={{display:'block',fontSize:'0.65rem',fontWeight:600,letterSpacing:'0.1em',textTransform:'uppercase',color:'#555'}}>Sydney</span>
             </div>
           </a>
 

@@ -26,8 +26,8 @@ export default function Hero() {
             </div>
 
             <h1 style={{marginBottom:'18px'}}>
-              Hi, I am Nathan,<br />
-              your local Sydney plumber.<br />
+              Welcome to<br />
+              NWP Plumbing.<br />
               <span style={{color:'#a4151a'}}>You will know the price before I start.</span>
             </h1>
 
