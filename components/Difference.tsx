@@ -12,12 +12,12 @@ export default function Difference() {
               {
                 icon:'$',
                 title:'A fixed, itemised quote before a spanner moves',
-                desc:'Most Sydney plumbers quote after the job. We do it first. You see every line item in writing and approve it. If we hit something unexpected mid-job, we stop and discuss. We never add costs without your sign-off.'
+                desc:'Most Sydney plumbers quote after the job. Our team does it first. You see every line item in writing and approve it. If we hit something unexpected mid-job, we stop and discuss. We never add costs without your sign-off.'
               },
               {
                 icon:'✓',
                 title:'Licensed, insured and Google-verified',
-                desc:'We are fully licensed and insured, and we are building our Google reviews from day one so you can check our track record as it grows. Every job is backed by a workmanship guarantee. If something is not right, we come back and fix it.'
+                desc:'Our team is fully licensed and insured, and we are building our Google reviews from day one so you can check our track record as it grows. Every job is backed by a workmanship guarantee. If something is not right, we come back and fix it.'
               },
               {
                 icon:'🕐',
@@ -40,7 +40,7 @@ export default function Difference() {
 
         <div style={{background:'#1c1c1c',borderRadius:'14px',padding:'36px'}}>
           <h3 style={{color:'#fff',fontSize:'1.5rem',fontWeight:700,marginBottom:'16px',lineHeight:1.25}}>
-            Worried about a high plumber bill?
+            Worried about a high plumber bill? We can help.
           </h3>
           <p style={{color:'rgba(255,255,255,0.6)',fontSize:'0.95rem',marginBottom:'28px'}}>
             You are not alone. It is one of the top searches in Sydney right now. The answer is simple: call us, get a fixed written quote, and only go ahead when you are happy with the number. No pressure, no hidden extras.

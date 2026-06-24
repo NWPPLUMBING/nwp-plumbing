@@ -16,7 +16,7 @@ export default function Hero() {
           </h1>
 
           <p style={{fontSize:'1.05rem',color:'#444',lineHeight:1.7,marginBottom:'28px',maxWidth:'560px'}}>
-            Hi, I am Nathan, a fully licensed and insured plumber based in Greater Sydney. I started NWP Plumbing because I was tired of customers getting blindsided by bills they never saw coming. Every job I take on gets a fixed, itemised quote in writing before I pick up a tool. Blocked drains, hot water, burst pipes, gas fitting and more. Done properly, the first time.
+            Hi, I am Nathan, founder of NWP Plumbing. Our team of fully licensed and insured plumbers are based right here in Greater Sydney. We started NWP Plumbing because we were tired of customers getting blindsided by bills they never saw coming. Every job we take on gets a fixed, itemised quote in writing before we pick up a tool. Blocked drains, hot water, burst pipes, gas fitting and more. Done properly, the first time.
           </p>
 
           <div style={{display:'flex',flexWrap:'wrap',gap:'12px',marginBottom:'28px'}}>

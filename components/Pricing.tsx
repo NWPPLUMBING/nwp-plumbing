@@ -5,7 +5,7 @@ export default function Pricing() {
         <span className="eyebrow">Transparent pricing</span>
         <h2>How much does a plumber cost in Sydney?</h2>
         <p style={{marginTop:'10px',maxWidth:'620px'}}>
-          It is the most-searched plumbing question in Sydney right now. I have seen customers get hit with bills that doubled after the job because nothing was agreed upfront. That is not how I work. I do not publish set prices because every job is genuinely different, but what I do guarantee is this: you will always get a full, written, itemised quote before any work starts. The number I quote is the number you pay. No exceptions, no add-ons, no surprises.
+          It is the most-searched plumbing question in Sydney right now. Our team has seen customers get hit with bills that doubled after the job because nothing was agreed upfront. That is not how we work. We do not publish set prices because every job is genuinely different, but what we do guarantee is this: you will always get a full, written, itemised quote before any work starts. The number we quote is the number you pay. No exceptions, no add-ons, no surprises.
         </p>
 
         <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'16px',marginTop:'32px'}}>

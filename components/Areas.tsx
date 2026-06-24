@@ -14,7 +14,7 @@ export default function Areas() {
           <span className="eyebrow">Where we work</span>
           <h2>Licensed plumber near you, across all of Greater Sydney</h2>
           <p style={{marginTop:'10px',maxWidth:'500px'}}>
-            I service all of Greater Sydney, from the city to the outer suburbs. I am servicing locally in the Northern Beaches area and across the Inner West, South West, Western Sydney and everything in between. Not sure if I cover your suburb? Just give me a call.
+            Our team services all of Greater Sydney, from the city to the outer suburbs. We are servicing locally in the Northern Beaches area and across the Inner West, South West, Western Sydney and everything in between. Not sure if we cover your suburb? Just give us a call.
           </p>
           <div style={{display:'flex',flexWrap:'wrap',gap:'7px',marginTop:'16px'}}>
             {suburbs.map((suburb, i) => (

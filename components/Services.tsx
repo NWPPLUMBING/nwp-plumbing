@@ -56,7 +56,7 @@ export default function Services() {
 
         <div style={{marginTop:'40px',textAlign:'center'}}>
           <p style={{fontSize:'1rem',color:'#555',maxWidth:'520px',margin:'0 auto 16px'}}>
-            Not sure which service you need, or want to talk through the job first? Nathan is happy to have a chat. No pressure, no obligation.
+            Not sure which service you need, or want to talk through the job first? Our team is happy to have a chat. No pressure, no obligation.
           </p>
           <a href="#contact" className="btn btn--red">Get in touch, it is free</a>
         </div>
