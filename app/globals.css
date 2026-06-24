@@ -73,3 +73,79 @@ p { color: var(--mid); }
   .wrap { padding: 0 16px; }
   .section { padding: 36px 0; }
 }
+@media (max-width: 768px) {
+  /* Force all two-column grids to single column */
+  .hero-grid,
+  .diff-grid,
+  .areas-grid,
+  .filtration-grid,
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Services - single column */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Steps - single column */
+  .steps-grid {
+    grid-template-columns: 1fr !important;
+    border: none !important;
+  }
+
+  /* Trust cards - single column */
+  .trust-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Pricing - single column */
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Promo strip - single column */
+  .promo-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* General inline grids */
+  [style*="grid-template-columns: 1fr 500px"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns: 1fr 400px"],
+  [style*="grid-template-columns: 1fr 420px"],
+  [style*="grid-template-columns: repeat(3"],
+  [style*="grid-template-columns: repeat(4"],
+  [style*="grid-template-columns: 2fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Fix overflow issues */
+  body { overflow-x: hidden; }
+  .wrap { overflow-x: hidden; }
+
+  /* Steps border fix */
+  [style*="border-right: 1.5px solid"] {
+    border-right: none !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+  }
+
+  /* Promo cards stack */
+  [style*="border-right: 1px solid rgba(255,255,255,0.2)"] {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+  }
+
+  /* Fix text overflow */
+  h1 { font-size: 1.8rem !important; }
+  h2 { font-size: 1.4rem !important; }
+
+  /* Buttons full width on mobile */
+  .hero-ctas { flex-direction: column; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+
+  /* Footer grid */
+  [style*="grid-template-columns: 2fr 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
