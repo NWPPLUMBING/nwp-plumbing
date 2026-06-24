@@ -3,6 +3,37 @@ import { useState } from 'react'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+
+  const [form, setForm] = useState({
+    name: '', phone: '', email: '', suburb: '', service: '', message: ''
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+    setError('')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError('Something went wrong. Please call us directly on 0477 160 911.')
+      }
+    } catch {
+      setError('Something went wrong. Please call us directly on 0477 160 911.')
+    }
+    setLoading(false)
+  }
 
   return (
     <>
@@ -47,28 +78,28 @@ export default function Contact() {
                 <p style={{color:'#444',fontSize:'0.95rem'}}>Nathan will call you back usually within a couple of hours.</p>
               </div>
             ) : (
-              <form onSubmit={(e)=>{e.preventDefault();setSubmitted(true)}}>
+              <form onSubmit={handleSubmit}>
                 <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'14px',marginBottom:'14px'}}>
                   <div>
                     <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Name</label>
-                    <input type="text" placeholder="Your name" required style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}}/>
+                    <input name="name" type="text" placeholder="Your name" required onChange={handleChange} value={form.name} style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}}/>
                   </div>
                   <div>
                     <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Phone</label>
-                    <input type="tel" placeholder="0400 000 000" required style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}}/>
+                    <input name="phone" type="tel" placeholder="0400 000 000" required onChange={handleChange} value={form.phone} style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}}/>
                   </div>
                 </div>
                 <div style={{marginBottom:'14px'}}>
                   <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Email</label>
-                  <input type="email" placeholder="your@email.com" style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}}/>
+                  <input name="email" type="email" placeholder="your@email.com" onChange={handleChange} value={form.email} style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}}/>
                 </div>
                 <div style={{marginBottom:'14px'}}>
                   <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Suburb</label>
-                  <input type="text" placeholder="e.g. Manly, Parramatta" style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}}/>
+                  <input name="suburb" type="text" placeholder="e.g. Manly, Parramatta" onChange={handleChange} value={form.suburb} style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none'}}/>
                 </div>
                 <div style={{marginBottom:'14px'}}>
                   <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Service needed</label>
-                  <select required style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none',background:'#fff'}}>
+                  <select name="service" required onChange={handleChange} value={form.service} style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none',background:'#fff'}}>
                     <option value="">Select a service</option>
                     <option>Blocked Drain</option>
                     <option>Hot Water System</option>
@@ -82,10 +113,11 @@ export default function Contact() {
                 </div>
                 <div style={{marginBottom:'14px'}}>
                   <label style={{display:'block',fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.06em',color:'#444',marginBottom:'6px'}}>Tell us about the problem</label>
-                  <textarea placeholder="Describe what is happening" style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none',minHeight:'100px',resize:'vertical'}}/>
+                  <textarea name="message" placeholder="Describe what is happening" onChange={handleChange} value={form.message} style={{width:'100%',padding:'11px 14px',border:'1.5px solid #e5e5e5',borderRadius:'6px',fontFamily:'inherit',fontSize:'0.925rem',color:'#1c1c1c',outline:'none',minHeight:'100px',resize:'vertical'}}/>
                 </div>
-                <button type="submit" style={{width:'100%',background:'#a4151a',color:'#fff',fontFamily:'inherit',fontWeight:700,fontSize:'1rem',border:'none',borderRadius:'6px',padding:'14px',cursor:'pointer',marginTop:'6px'}}>
-                  Send quote request
+                {error && <p style={{color:'#a4151a',fontSize:'0.875rem',marginBottom:'12px'}}>{error}</p>}
+                <button type="submit" disabled={loading} style={{width:'100%',background:loading?'#888':'#a4151a',color:'#fff',fontFamily:'inherit',fontWeight:700,fontSize:'1rem',border:'none',borderRadius:'6px',padding:'14px',cursor:loading?'not-allowed':'pointer',marginTop:'6px'}}>
+                  {loading ? 'Sending...' : 'Send quote request'}
                 </button>
               </form>
             )}
