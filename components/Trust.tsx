@@ -10,6 +10,9 @@ export default function Trust() {
           <span className="eyebrow">Building trust from day one</span>
           <h2>Every review earned the old-fashioned way</h2>
           <p style={{marginTop:'10px',maxWidth:'580px'}}>Reviews are how Sydney homeowners choose a plumber. Our team builds ours honestly, one job at a time. We ask every customer for a Google review after every job. No buying, no faking, no chasing stars we have not earned.</p>
+        <a href="https://g.page/r/CWsEZUJmBDGWEBM/review" target="_blank" rel="noopener noreferrer" className="btn btn--red" style={{marginTop:'24px',display:'inline-flex'}}>
+          Leave us a Google review ★
+        </a>
           <div className="trust-grid">
             {[
               {icon:'✓',label:'On every job',title:'Workmanship guarantee',desc:'Every job our team completes is backed by our workmanship guarantee. If something is not right after we leave, we come back and fix it. No charge, no argument.'},
