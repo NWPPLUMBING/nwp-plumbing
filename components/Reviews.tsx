@@ -1,12 +1,11 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 
-const reviews = [
-  {name:'David M.',suburb:'Manly',rating:5,text:'Burst pipe under the sink at 9pm on a Sunday. Nathan was here within 45 minutes, fixed the problem and the price was exactly what he quoted. Could not ask for more.',date:'June 2025'},
-  {name:'Sarah K.',suburb:'Parramatta',rating:5,text:'Had a blocked drain that two other plumbers could not sort out. NWP used camera inspection and found the issue immediately. Professional, clean and reasonably priced.',date:'May 2025'},
-  {name:'Tom W.',suburb:'Chatswood',rating:5,text:'New hot water system installed. Nathan was on time, done in 3 hours, price matched the quote exactly and he explained how to maintain it. Already recommended him to two neighbours.',date:'April 2025'},
-  {name:'Jessica L.',suburb:'Stanmore',rating:5,text:'Called Nathan for a leaking tap that had been dripping for months. He came out same day, quoted upfront and had it fixed in under an hour. Great service.',date:'March 2025'},
-  {name:'Mike R.',suburb:'Frenchs Forest',rating:5,text:'Had NWP install a whole home filtration system. Nathan was knowledgeable, tidy and the price was exactly what was quoted. Water tastes so much better now.',date:'June 2025'},
+ const reviews = [
+  {name:'Roisin Hayes',suburb:'Sydney',rating:5,text:'Amazing service and perfectly priced. Nathan arrived same day and on time. Have used him multiple times, highly recommend.',date:'July 2025'},
+  {name:'Jessica Mundey',suburb:'Sydney',rating:5,text:'NWP Plumbing was professional and prompt, reliable and transparent. Highly recommend!!',date:'July 2025'},
+  {name:'Linda Waltho',suburb:'Sydney',rating:5,text:'Excellent service! Arrived on time, fixed the issue quickly, and was professional throughout. Highly recommend!',date:'July 2025'},
+  {name:'Kim Treseder',suburb:'Sydney',rating:5,text:'Great and reliable service! Would definitely hire again!',date:'July 2025'},
 ]
 
 function Stars({rating}: {rating: number}) {
