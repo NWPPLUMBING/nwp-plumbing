@@ -11,6 +11,7 @@ import Areas from '@/components/Areas'
 import Filtration from '@/components/Filtration'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
+import Reviews from '@/components/Reviews'
 import Contact from '@/components/Contact'
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <HowItWorks />
       <Pricing />
       <Trust />
+      <Reviews />
       <Areas />
       <Filtration />
       <FAQ />
