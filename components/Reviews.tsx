@@ -23,7 +23,7 @@ export default function Reviews() {
   const trackRef = useRef<HTMLDivElement>(null)
   const [isPaused, setIsPaused] = useState(false)
   const posRef = useRef(0)
-  const animRef = useRef<number>()
+  const animRef = useRef<number>(0)
   const allReviews = [...reviews, ...reviews]
 
   useEffect(() => {
