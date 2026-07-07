@@ -93,7 +93,7 @@ export default function Reviews() {
             className="btn btn--red"
             style={{fontSize:'0.9rem',padding:'11px 20px'}}
           >
-            Leave us a review ★
+            Leave us a review 
           </a>
         </div>
 
