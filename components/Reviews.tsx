@@ -2,10 +2,10 @@
 import { useEffect, useRef, useState } from 'react'
 
  const reviews = [
-  {name:'Roisin Hayes',suburb:'Sydney',rating:5,text:'Amazing service and perfectly priced. Nathan arrived same day and on time. Have used him multiple times, highly recommend.',date:'July 2025'},
-  {name:'Jessica Mundey',suburb:'Sydney',rating:5,text:'NWP Plumbing was professional and prompt, reliable and transparent. Highly recommend!!',date:'July 2025'},
-  {name:'Linda Waltho',suburb:'Sydney',rating:5,text:'Excellent service! Arrived on time, fixed the issue quickly, and was professional throughout. Highly recommend!',date:'July 2025'},
-  {name:'Kim Treseder',suburb:'Sydney',rating:5,text:'Great and reliable service! Would definitely hire again!',date:'July 2025'},
+  {name:'Roisin Hayes',suburb:'Sydney',rating:5,text:'Amazing service and perfectly priced. Nathan arrived same day and on time. Have used him multiple times, highly recommend.',date:'July 2026'},
+  {name:'Jessica Mundey',suburb:'Sydney',rating:5,text:'NWP Plumbing was professional and prompt, reliable and transparent. Highly recommend!!',date:'July 2026'},
+  {name:'Linda Waltho',suburb:'Sydney',rating:5,text:'Excellent service! Arrived on time, fixed the issue quickly, and was professional throughout. Highly recommend!',date:'July 2026'},
+  {name:'Kim Treseder',suburb:'Sydney',rating:5,text:'Great and reliable service! Would definitely hire again!',date:'July 2026'},
 {
     name: 'Glenn T.',
     suburb: 'Sydney',
