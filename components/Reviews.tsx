@@ -6,6 +6,20 @@ import { useEffect, useRef, useState } from 'react'
   {name:'Jessica Mundey',suburb:'Sydney',rating:5,text:'NWP Plumbing was professional and prompt, reliable and transparent. Highly recommend!!',date:'July 2025'},
   {name:'Linda Waltho',suburb:'Sydney',rating:5,text:'Excellent service! Arrived on time, fixed the issue quickly, and was professional throughout. Highly recommend!',date:'July 2025'},
   {name:'Kim Treseder',suburb:'Sydney',rating:5,text:'Great and reliable service! Would definitely hire again!',date:'July 2025'},
+{
+    name: 'Glenn T.',
+    suburb: 'Sydney',
+    rating: 5,
+    text: 'This guy\'s a legend. Had a problem, he came out same day and sorted it. Competitive price, highly recommend and will use again.',
+    date: 'July 2026',
+  },
+  {
+    name: 'Helen C.',
+    suburb: 'Sydney',
+    rating: 5,
+    text: 'I found Nathan from the 5-star Google reviews and he deserves the high rating. His quotation was very transparent and he came promptly to fix plumbing issues another plumber failed to fix recently. Very clear communication, friendly and professional. Highly recommend, happy to add another 5 stars.',
+    date: 'July 2026',
+  },
 ]
 
 function Stars({rating}: {rating: number}) {
