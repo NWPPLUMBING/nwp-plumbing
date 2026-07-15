@@ -20,6 +20,13 @@ import { useEffect, useRef, useState } from 'react'
     text: 'I found Nathan from the 5-star Google reviews and he deserves the high rating. His quotation was very transparent and he came promptly to fix plumbing issues another plumber failed to fix recently. Very clear communication, friendly and professional. Highly recommend, happy to add another 5 stars.',
     date: 'July 2026',
   },
+{
+  name: "Dale McRae",
+  suburb: "Harrington Grove",
+  rating: 5,
+  text: "Recently installed my full home filtration. Great communication and honest pricing and service. Highly recommended",
+  date: "July 2026",
+},
 ]
 
 function Stars({rating}: {rating: number}) {
