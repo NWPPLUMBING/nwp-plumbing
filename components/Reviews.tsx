@@ -22,7 +22,7 @@ import { useEffect, useRef, useState } from 'react'
   },
 {
   name: "Dale McRae",
-  suburb: "Harrington Grove",
+  suburb: "Sydney",
   rating: 5,
   text: "Recently installed my full home filtration. Great communication and honest pricing and service. Highly recommended",
   date: "July 2026",
