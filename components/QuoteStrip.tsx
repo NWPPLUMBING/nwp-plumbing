@@ -30,6 +30,7 @@ export default function QuoteStrip() {
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [suburb, setSuburb] = useState('')
+  const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle')
 
   const open = selected.length > 0
@@ -48,7 +49,7 @@ export default function QuoteStrip() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, phone, suburb, email: '', service: selected.join(', '), message: '' }),
+        body: JSON.stringify({ name, phone, suburb, email, service: selected.join(', '), message: '' }),
       })
       if (!res.ok) throw new Error()
       setStatus('done')
@@ -108,6 +109,7 @@ export default function QuoteStrip() {
                   <input type="text" placeholder="First name" value={name} onChange={e => setName(e.target.value)} autoComplete="given-name" />
                   <input type="tel" placeholder="Mobile" value={phone} onChange={e => setPhone(e.target.value)} autoComplete="tel" />
                   <input className="w" type="text" placeholder="Suburb" value={suburb} onChange={e => setSuburb(e.target.value)} />
+                  <input className="w" type="email" placeholder="Email (optional)" value={email} onChange={e => setEmail(e.target.value)} autoComplete="email" />
                 </div>
                 <button type="button" className="nwe-sub" onClick={submit} disabled={status === 'sending'}>
                   {status === 'sending' ? 'Sending\u2026' : 'Get my fixed quote'}
@@ -149,7 +151,7 @@ export default function QuoteStrip() {
         .nwe-tick { position: absolute; top: 10px; right: 10px; width: 20px; height: 20px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; opacity: 0; transform: scale(.3); transition: opacity .16s, transform .18s cubic-bezier(.34,1.56,.64,1); }
         .nwe-chip[aria-pressed="true"] .nwe-tick { opacity: 1; transform: scale(1); }
         .nwe-wrap { max-height: 0; opacity: 0; overflow: hidden; transition: max-height .32s ease, opacity .25s ease, margin-top .32s ease; }
-        .nwe-wrap.on { max-height: 340px; opacity: 1; margin-top: 16px; }
+        .nwe-wrap.on { max-height: 400px; opacity: 1; margin-top: 16px; }
         .nwe-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
         .nwe-fields input { border: 1.5px solid #ddd9d3; border-radius: 11px; padding: 13px; font-size: 16px; font-family: inherit; background: #fbfaf8; color: #16181a; width: 100%; transition: border-color .14s; }
         .nwe-fields input:focus { outline: none; border-color: #a4151a; }
