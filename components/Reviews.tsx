@@ -41,11 +41,18 @@ import { useEffect, useRef, useState } from 'react'
     text: "Great service from start to finish. Reliable, efficient, and excellent workmanship. Highly recommend!",
     date: "July 2026",
   },
-  {
+   {
     name: "Steevie Little",
     suburb: "Sydney",
     rating: 5,
-    text: "Nathan is absolutely incredible! From the moment he walked in the door, he was warm, friendly, and truly listened to my... [FULL TEXT NEEDED]",
+    text: "Nathan is absolutely incredible! From the moment he walked in the door, he was warm, friendly, and truly listened to my concerns. Not only did he fix my plumbing issue quickly, but he took the time to explain what was wrong and how he was going to fix it, which really put me at ease. Nathan's attention to detail was fantastic - he left everything spotless, making sure everything was perfect. It's clear he genuinely cares about his customers and takes pride in his work. I honestly wish every tradie was like Nathan! If you need a plumber who goes above and beyond, Nathan is your guy. Awesome service, highly recommended.",
+    date: "July 2026",
+  },
+  {
+    name: "Suz Thompson",
+    suburb: "Sydney",
+    rating: 5,
+    text: "Great experience with NWP Plumbing. They were quick, professional and easy to deal with. The work was done to a high standard and everything was left clean and tidy. Would definitely recommend!",
     date: "July 2026",
   },
 ]
