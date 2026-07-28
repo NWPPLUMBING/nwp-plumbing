@@ -14,7 +14,7 @@ export default function Hero() {
           display: grid;
           grid-template-columns: 1fr 500px;
           gap: 48px;
-          align-items: center;
+          align-items: start;
         }
         @media (max-width: 768px) {
           .hero-grid {
