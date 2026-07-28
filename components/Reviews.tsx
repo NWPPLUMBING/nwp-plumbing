@@ -27,6 +27,27 @@ import { useEffect, useRef, useState } from 'react'
   text: "Recently installed my full home filtration. Great communication and honest pricing and service. Highly recommended",
   date: "July 2026",
 },
+{
+    name: "Narelle",
+    suburb: "Sydney",
+    rating: 5,
+    text: "Highly recommended plumber, without a doubt. Nathan was able to assist in my hour of need. He is the most professional, polite & helpful plumber in Southwest Sydney!",
+    date: "July 2026",
+  },
+  {
+    name: "Jisha Joseph",
+    suburb: "Sydney",
+    rating: 5,
+    text: "Great service from start to finish. Reliable, efficient, and excellent workmanship. Highly recommend!",
+    date: "July 2026",
+  },
+  {
+    name: "Steevie Little",
+    suburb: "Sydney",
+    rating: 5,
+    text: "Nathan is absolutely incredible! From the moment he walked in the door, he was warm, friendly, and truly listened to my... [FULL TEXT NEEDED]",
+    date: "July 2026",
+  },
 ]
 
 function Stars({rating}: {rating: number}) {
