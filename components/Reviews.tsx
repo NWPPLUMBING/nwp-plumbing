@@ -55,6 +55,20 @@ import { useEffect, useRef, useState } from 'react'
     text: "Great experience with NWP Plumbing. They were quick, professional and easy to deal with. The work was done to a high standard and everything was left clean and tidy. Would definitely recommend!",
     date: "July 2026",
   },
+  {
+    name: "Costa",
+    suburb: "Sydney",
+    rating: 5,
+    text: "It's refreshing to find a company that genuinely takes pride in their workmanship and customer service. Their hard work, attention to detail and honest approach really stood out. I wouldn't hesitate to recommend NWP Plumbing to anyone looking for reliable, high-quality plumbing services. Thanks again team!",
+    date: "July 2026",
+  },
+  {
+    name: "Janelle",
+    suburb: "Sydney",
+    rating: 5,
+    text: "Fantastic service! Arrived on time, was friendly and professional and completed the job to a high standard. Great communication, fair pricing, and everything was left clean and tidy. I highly recommend and would definitely use again! Great job Nathan!",
+    date: "July 2026",
+  },
 ]
 
 function Stars({rating}: {rating: number}) {
