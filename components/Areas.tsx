@@ -6,7 +6,14 @@ const suburbs = [
   'Northern Beaches','Inner West','North Shore','Eastern Suburbs','Sydney CBD',
   'Hills District','Sutherland Shire','Western Sydney','Parramatta','Blacktown',
 ]
-
+const suburbLinks: Record<string, string> = {
+  'Manly': '/plumber-manly',
+  'Frenchs Forest': '/plumber-frenchs-forest',
+  'Stanmore': '/plumber-stanmore',
+  'Strathfield': '/plumber-strathfield',
+  'Liverpool': '/plumber-liverpool',
+  'Bankstown': '/plumber-bankstown',
+}
 export default function Areas() {
   const settingsPath = path.join(process.cwd(), 'content/settings/main.json')
   const settings = JSON.parse(fs.readFileSync(settingsPath, 'utf-8'))
@@ -25,11 +32,15 @@ export default function Areas() {
               Our team services all of Greater Sydney, from the city to the outer suburbs. We are servicing locally in the Northern Beaches area and across the Inner West, South West, Western Sydney and everything in between. Not sure if we cover your suburb? Just give us a call.
             </p>
             <div style={{display:'flex',flexWrap:'wrap',gap:'7px',marginTop:'16px'}}>
-              {suburbs.map((suburb,i)=>(
-                <span key={i} style={{background:'#fff',border:'1.5px solid #e5e5e5',borderRadius:'100px',padding:'5px 14px',fontSize:'0.82rem',fontWeight:600,color:'#444'}}>
-                  {suburb}
-                </span>
-              ))}
+              {suburbs.map((suburb,i)=>{
+                const href = suburbLinks[suburb]
+                const base = {background:'#fff',border:'1.5px solid #e5e5e5',borderRadius:'100px',padding:'5px 14px',fontSize:'0.82rem',fontWeight:600,color:'#444'}
+                return href ? (
+                  <a key={i} href={href} style={{...base,color:'#a4151a',borderColor:'#f5c0c0',textDecoration:'none'}}>{suburb}</a>
+                ) : (
+                  <span key={i} style={base}>{suburb}</span>
+                )
+              })}
             </div>
           </div>
           <div style={{background:'#1c1c1c',borderRadius:'14px',padding:'28px'}}>
