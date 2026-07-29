@@ -38,7 +38,7 @@ export default function Areas() {
               Fastest way to get a fixed quote and lock in a time. Call or message Nathan directly.
             </p>
             {[
-              {icon:'📞',label:'Call or SMS',val:settings.phone,href:`tel:+61${settings.phone.replace(/\s/g,'')}`},
+              {icon:'📞',label:'Call or SMS',val:settings.phone,href:`tel:+61${settings.phone.replace(/\s/g,'').replace(/^0/,'')}`},
 {icon:'✉️',label:'Email',val:settings.email,href:`mailto:${settings.email}`},
 {icon:'🕐',label:'Hours',val:settings.hours,href:null},
             ].map((row,i)=>(

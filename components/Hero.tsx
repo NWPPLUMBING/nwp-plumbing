@@ -49,7 +49,7 @@ export default function Hero() {
                 {hero.subtext}
               </p>
               <div style={{display:'flex',flexWrap:'wrap',gap:'12px'}}>
-                <a href={`tel:+61${settings.phone.replace(/\s/g,'')}`} className="btn btn--red">
+                <a href={`tel:+61${settings.phone.replace(/\s/g,'').replace(/^0/,'')}`} className="btn btn--red">
                   📞 Call Nathan on {settings.phone}
                 </a>
                 <a href="#contact" className="btn btn--outline">Get a free quote</a>
