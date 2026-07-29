@@ -16,6 +16,14 @@ export default function Hero() {
           gap: 48px;
           align-items: start;
         }
+        .hero-ute {
+          max-width: 560px;
+          margin: 44px auto 0;
+          border-radius: 14px;
+          overflow: hidden;
+          background: #f7f7f7;
+          border: 1px solid #e5e5e5;
+        }
         @media (max-width: 768px) {
           .hero-grid {
             grid-template-columns: 1fr;
@@ -58,8 +66,8 @@ export default function Hero() {
               <QuoteStrip />
             </div>
           </div>
-          <div style={{marginTop:'40px',borderRadius:'14px',overflow:'hidden',background:'#f7f7f7',border:'1px solid #e5e5e5'}}>
-            <img src="/images/Ute.png" alt="NWP Plumbing ute" style={{width:'100%',height:'360px',objectFit:'cover',display:'block'}}/>
+          <div className="hero-ute">
+            <img src="/images/Ute.png" alt="NWP Plumbing ute" style={{width:'100%',height:'320px',objectFit:'cover',display:'block'}}/>
             <div style={{display:'flex',borderTop:'1px solid #e5e5e5',background:'rgba(255,255,255,0.95)'}}>
               {[['$0','Call-out fee on quoted jobs'],['24/7','Emergency response'],['Fixed','Price agreed before we start']].map(([val,label],i)=>(
                 <div key={i} style={{flex:1,padding:'14px 16px',textAlign:'center',borderRight:i<2?'1px solid #e5e5e5':'none'}}>
