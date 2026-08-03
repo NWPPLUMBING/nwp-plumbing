@@ -13,6 +13,20 @@ import { useEffect, useRef, useState } from 'react'
     text: 'This guy\'s a legend. Had a problem, he came out same day and sorted it. Competitive price, highly recommend and will use again.',
     date: 'July 2026',
   },
+ {
+    name: "Teddy",
+    suburb: "Sydney",
+    rating: 5,
+    text: "NWP Plumbing was absolutely amazing. Nathan our plumbing was so nice, respectful and knew what he was talking about when looking at our noisy pipes. He ended up servicing all of our taps and gave us so much more pressure in our shower. Would 100% recommend.",
+    date: "August 2026",
+  },
+  {
+    name: "Oscar Johnson",
+    suburb: "Sydney",
+    rating: 5,
+    text: "I couldn't be happier with the plumbing service I received last week. The workmanship was outstanding, and it was clear that NWP takes great pride in the quality of their work. They were in and out within the hour of installing our dishwasher and new kitchen and laundry taps.",
+    date: "August 2026",
+  },
   {
     name: 'Helen C.',
     suburb: 'Sydney',
