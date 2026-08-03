@@ -52,6 +52,13 @@ export default function QuoteStrip() {
         body: JSON.stringify({ name, phone, suburb, email, service: selected.join(', '), message: '' }),
       })
       if (!res.ok) throw new Error()
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'conversion', {
+          send_to: 'AW-18340910694/GzQHCJ_3mtQcEOas0KlE',
+          value: 1.0,
+          currency: 'AUD',
+        })
+      }
       setStatus('done')
     } catch {
       setStatus('error')
