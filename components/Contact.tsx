@@ -25,6 +25,13 @@ export default function Contact() {
         body: JSON.stringify(form),
       })
       if (res.ok) {
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'conversion', {
+            send_to: 'AW-18340910694/GzQHCJ_3mtQcEOas0KlE',
+            value: 1.0,
+            currency: 'AUD',
+          })
+        }
         setSubmitted(true)
       } else {
         setError('Something went wrong. Please call us directly on 0477 160 911.')
