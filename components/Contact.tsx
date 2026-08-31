@@ -32,6 +32,9 @@ export default function Contact() {
             currency: 'AUD',
           })
         }
+        if (typeof window !== 'undefined' && (window as any).fbq) {
+          (window as any).fbq('track', 'Lead')
+        }
         setSubmitted(true)
       } else {
         setError('Something went wrong. Please call us directly on 0477 160 911.')
