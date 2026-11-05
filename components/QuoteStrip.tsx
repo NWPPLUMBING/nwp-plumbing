@@ -25,8 +25,8 @@ function Check({ color, w = 12, sw = 4 }: { color: string; w?: number; sw?: numb
   )
 }
 
-export default function QuoteStrip() {
-  const [selected, setSelected] = useState<string[]>([])
+export default function QuoteStrip({ preselect = [] }: { preselect?: string[] } = {}) {
+  const [selected, setSelected] = useState<string[]>(preselect)
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [suburb, setSuburb] = useState('')

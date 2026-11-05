@@ -21,8 +21,8 @@ export default function Footer() {
 
           <div>
             <h4 style={{fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#fff',marginBottom:'14px'}}>Services</h4>
-            {['Emergency Plumber','Blocked Drains','Hot Water Systems','Burst Pipes and Leaks','Gas Fitting','Taps and Toilets','Whole Home Filtration'].map((item, i) => (
-              <a key={i} href="#services" style={{display:'block',color:'rgba(255,255,255,0.55)',textDecoration:'none',fontSize:'0.875rem',marginBottom:'8px'}}>
+            {[['Emergency Plumber','/emergency-plumber'],['Blocked Drains','/blocked-drains'],['Hot Water Systems','/hot-water'],['Burst Pipes and Leaks','/burst-pipes-leaks'],['Gas Fitting','/gas-fitting'],['Toilet Replacement','/toilet-replacement'],['Bathroom Renovations','/bathroom-renovations'],['Whole Home Filtration','/water-filtration']].map(([item, href], i) => (
+              <a key={i} href={href} style={{display:'block',color:'rgba(255,255,255,0.55)',textDecoration:'none',fontSize:'0.875rem',marginBottom:'8px'}}>
                 {item}
               </a>
             ))}

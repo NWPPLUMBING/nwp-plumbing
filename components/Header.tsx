@@ -38,14 +38,14 @@ export default function Header() {
           </a>
 
           <nav className="desktop-nav" style={{alignItems:'center',gap:'6px'}}>
-            <a href="#services" style={{color:'#444',textDecoration:'none',fontSize:'0.875rem',fontWeight:500,padding:'8px 12px',borderRadius:'5px'}}>Services</a>
-            <a href="#pricing" style={{color:'#444',textDecoration:'none',fontSize:'0.875rem',fontWeight:500,padding:'8px 12px',borderRadius:'5px'}}>Pricing</a>
-            <a href="#about" style={{color:'#444',textDecoration:'none',fontSize:'0.875rem',fontWeight:500,padding:'8px 12px',borderRadius:'5px'}}>About</a>
-            <a href="#contact" style={{color:'#444',textDecoration:'none',fontSize:'0.875rem',fontWeight:500,padding:'8px 12px',borderRadius:'5px'}}>Contact</a>
+            <a href="/#services" style={{color:'#444',textDecoration:'none',fontSize:'0.875rem',fontWeight:500,padding:'8px 12px',borderRadius:'5px'}}>Services</a>
+            <a href="/#pricing" style={{color:'#444',textDecoration:'none',fontSize:'0.875rem',fontWeight:500,padding:'8px 12px',borderRadius:'5px'}}>Pricing</a>
+            <a href="/#about" style={{color:'#444',textDecoration:'none',fontSize:'0.875rem',fontWeight:500,padding:'8px 12px',borderRadius:'5px'}}>About</a>
+            <a href="/#contact" style={{color:'#444',textDecoration:'none',fontSize:'0.875rem',fontWeight:500,padding:'8px 12px',borderRadius:'5px'}}>Contact</a>
             <a href="tel:+61477160911" style={{color:'#1c1c1c',fontWeight:700,fontSize:'0.9rem',textDecoration:'none',marginLeft:'8px'}}>
               📞 0477 160 911
             </a>
-            <a href="#contact" className="btn btn--red" style={{marginLeft:'8px',padding:'9px 18px',fontSize:'0.85rem'}}>Get a quote</a>
+            <a href="/#contact" className="btn btn--red" style={{marginLeft:'8px',padding:'9px 18px',fontSize:'0.85rem'}}>Get a quote</a>
           </nav>
 
           <div className="mobile-nav-right" style={{alignItems:'center',gap:'10px'}}>
@@ -74,11 +74,11 @@ export default function Header() {
             <button onClick={() => setMenuOpen(false)} style={{background:'none',border:'none',cursor:'pointer',fontSize:'1.5rem',color:'#1c1c1c',padding:'4px'}}>✕</button>
           </div>
           {[
-            {href:'#services',label:'Services'},
-            {href:'#pricing',label:'Pricing'},
-            {href:'#about',label:'About'},
-            {href:'#filtration',label:'Whole Home Filtration'},
-            {href:'#contact',label:'Contact'},
+            {href:'/#services',label:'Services'},
+            {href:'/#pricing',label:'Pricing'},
+            {href:'/#about',label:'About'},
+            {href:'/#filtration',label:'Whole Home Filtration'},
+            {href:'/#contact',label:'Contact'},
           ].map((item, i) => (
             <a key={i} href={item.href} onClick={() => setMenuOpen(false)} style={{display:'block',fontSize:'1.2rem',fontWeight:600,color:'#1c1c1c',textDecoration:'none',padding:'14px 0',borderBottom:'1px solid #e5e5e5'}}>
               {item.label}
