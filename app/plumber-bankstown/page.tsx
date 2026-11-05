@@ -42,7 +42,7 @@ export default function PlumberBankstown() {
           <div style={{background:'#1c1c1c',borderRadius:'14px',padding:'40px',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:'24px'}}>
             <div>
               <h2 style={{color:'#fff',fontSize:'1.5rem',fontWeight:700,marginBottom:'8px'}}>Need a plumber in Bankstown?</h2>
-              <p style={{color:'rgba(255,255,255,0.6)',fontSize:'0.95rem'}}>Call Nathan directly for the fastest response. Fixed quote, $0 call-out when work proceeds.</p>
+              <p style={{color:'rgba(255,255,255,0.6)',fontSize:'0.95rem'}}>Call Nathan directly for the fastest response. Fixed quote, $0 call-out on standard jobs when work goes ahead (<a href="/terms" style={{color:'rgba(255,255,255,0.6)'}}>T&amp;Cs apply</a>).</p>
             </div>
             <a href="tel:+61477160911" className="btn btn--red" style={{fontSize:'1rem',padding:'15px 28px'}}>📞 0477 160 911</a>
           </div>

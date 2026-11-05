@@ -15,7 +15,7 @@ export default function Trust() {
         </a>
           <div className="trust-grid">
             {[
-              {icon:'✓',label:'On every job',title:'Workmanship guarantee',desc:'Every job our team completes is backed by our workmanship guarantee. If something is not right after we leave, we come back and fix it. No charge, no argument.'},
+              {icon:'✓',label:'On every job',title:'Lifetime workmanship guarantee',desc:'Every job our team completes is backed by our lifetime workmanship guarantee. If something is not right after we leave, we come back and fix it. No charge, no argument.'},
               {icon:'G',label:'Real reviews, growing daily',title:'Honest Google reviews',desc:'We ask every customer for an honest review after every job. Check our Google listing to see how we are tracking and become one of our first reviews by booking today.'},
               {icon:'$',label:'Always',title:'Price we quote is price you pay',desc:'The itemised quote you approve is the invoice you receive. No while-we-were-there add-ons, no surprises when the job is done. That is the whole point.'},
             ].map((card,i)=>(

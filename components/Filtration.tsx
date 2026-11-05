@@ -23,7 +23,7 @@ export default function Filtration() {
               Entire Home Water Filtration Systems<br/><span style={{color:'#a4151a'}}>Installed from $1,099</span>
             </h2>
             <p style={{fontSize:'1rem',color:'#444',lineHeight:1.75,marginBottom:'28px'}}>
-              Most Sydney homes run on water treated with chlorine, chloramines and other chemicals that affect taste, smell and long-term appliance health. A whole-home filtration system puts clean, filtered water through every tap, shower and appliance in your house, installed by a licensed plumber, backed by a workmanship guarantee.
+              Most Sydney homes run on water treated with chlorine, chloramines and other chemicals that affect taste, smell and long-term appliance health. A whole-home filtration system puts clean, filtered water through every tap, shower and appliance in your house, installed by a licensed plumber, backed by our lifetime workmanship guarantee.
             </p>
             <div style={{display:'flex',flexDirection:'column',gap:0,marginBottom:'20px'}}>
               {features.map((f,i)=>(
@@ -54,7 +54,7 @@ export default function Filtration() {
               </div>
               <div style={{fontSize:'0.78rem',color:'rgba(255,255,255,0.4)',marginBottom:'24px'}}>Price varies by home size and system selected. Fixed quote provided after assessment.</div>
               <ul style={{listStyle:'none',display:'flex',flexDirection:'column',gap:'8px',marginBottom:'28px',paddingTop:'20px',borderTop:'1px solid rgba(255,255,255,0.1)'}}>
-                {['Whole-home mains entry filtration','Multi-stage sediment and carbon filter','Chlorine and chloramine removal','Heavy metal and rust filtration','Professional licensed installation','Pressure testing and system check','Workmanship guarantee included','Annual service reminders'].map((item,i)=>(
+                {['Whole-home mains entry filtration','Multi-stage sediment and carbon filter','Chlorine and chloramine removal','Heavy metal and rust filtration','Professional licensed installation','Pressure testing and system check','Lifetime workmanship guarantee','Annual service reminders'].map((item,i)=>(
                   <li key={i} style={{fontSize:'0.875rem',color:'rgba(255,255,255,0.75)',display:'flex',gap:'10px',alignItems:'flex-start'}}>
                     <span style={{color:'#66bb6a',fontWeight:700,flexShrink:0}}>✓</span>{item}
                   </li>

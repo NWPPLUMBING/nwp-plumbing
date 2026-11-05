@@ -30,7 +30,7 @@ export default function Footer() {
 
           <div>
             <h4 style={{fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#fff',marginBottom:'14px'}}>Company</h4>
-            {[['About','#about'],['Pricing','#pricing'],['Contact','#contact']].map(([label, href], i) => (
+            {[['About','/#about'],['Pricing','/#pricing'],['Contact','/#contact'],['Terms & Conditions','/terms']].map(([label, href], i) => (
               <a key={i} href={href} style={{display:'block',color:'rgba(255,255,255,0.55)',textDecoration:'none',fontSize:'0.875rem',marginBottom:'8px'}}>
                 {label}
               </a>

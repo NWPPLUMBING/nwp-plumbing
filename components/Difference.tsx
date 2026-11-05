@@ -17,7 +17,7 @@ export default function Difference() {
             <div>
               {[
                 {icon:'$',title:'A fixed, itemised quote before a spanner moves',desc:'Most Sydney plumbers quote after the job. Our team does it first. You see every line item in writing and approve it. If we hit something unexpected mid-job, we stop and discuss. We never add costs without your sign-off.'},
-                {icon:'✓',title:'Licensed, insured and Google-verified',desc:'Our team is fully licensed and insured, and we are building our Google reviews from day one so you can check our track record as it grows. Every job is backed by a workmanship guarantee. If something is not right, we come back and fix it.'},
+                {icon:'✓',title:'Licensed, insured and Google-verified',desc:'Our team is fully licensed and insured, and we are building our Google reviews from day one so you can check our track record as it grows. Every job is backed by our lifetime workmanship guarantee. If something is not right, we come back and fix it.'},
                 {icon:'🕐',title:'Same-day, 24/7 for emergencies',desc:'Our team is based in Sydney and on the road every day. Same-day bookings for most jobs, and around-the-clock availability when a burst pipe or gas leak cannot wait until morning.'},
               ].map((point,i)=>(
                 <div key={i} style={{display:'flex',gap:'16px',padding:'18px 0',borderBottom:i<2?'1px solid #e5e5e5':'none'}}>

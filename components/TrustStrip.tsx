@@ -1,7 +1,7 @@
 export default function TrustStrip() {
   const items = [
     'Fixed itemised quote agreed before any work starts',
-    '$0 call-out fee when work proceeds',
+    '$0 call-out on standard jobs*',
     'Licensed and fully insured',
     'Available Mon-Sun, 24/7',
     '24/7 emergency plumber Sydney',

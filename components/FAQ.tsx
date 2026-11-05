@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     q: 'What does the $0 call-out fee actually mean?',
-    a: 'We charge $0 call-out fee when work is commenced on the day. We come out, assess the job and give you a written quote at no charge. If you approve the quote and we start work, there is no separate call-out fee on top. If you decide not to proceed, a small assessment fee may apply. We will always tell you upfront.',
+    a: 'On standard jobs there is no call-out fee when the work goes ahead. We come out, assess the job and give you a written, itemised quote. Approve it and we get started, with no call-out fee on top. Emergency call-outs, and assessments where you decide not to go ahead, are charged separately. We always explain this on the phone before we book you in. Full details are on our Terms page.',
   },
   {
     q: 'Why did I get such a high plumber bill?',
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: 'Are you a licensed plumber near me?',
-    a: 'Yes. NWP Plumbing is fully licensed and insured across Greater Sydney. We are locally based, on the road daily, and cover the whole metro including the Northern Beaches, Inner West, North Shore, Eastern Suburbs, Western Sydney and everywhere in between. Every job comes with a workmanship guarantee.',
+    a: 'Yes. NWP Plumbing is fully licensed and insured. Based in Liverpool, our team covers Sydney within 30 km of Parramatta: Western Sydney, the Hills, the Inner West, the North Shore, the Northern Beaches, the Eastern Suburbs and the CBD. We are on the road daily, and every job comes with our lifetime workmanship guarantee.',
   },
   {
     q: 'Do you do hot water system replacement in Sydney?',

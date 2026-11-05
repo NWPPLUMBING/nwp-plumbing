@@ -31,19 +31,19 @@ export default function Pricing() {
             <div style={{border:'1.5px solid #a4151a',borderRadius:'10px',padding:'28px 24px',background:'#fff',position:'relative',boxShadow:'0 0 0 1px #a4151a'}}>
               <div style={{position:'absolute',top:'-12px',left:'50%',transform:'translateX(-50%)',background:'#a4151a',color:'#fff',fontSize:'0.7rem',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',padding:'3px 14px',borderRadius:'100px',whiteSpace:'nowrap'}}>Key benefit</div>
               <div style={{fontSize:'0.72rem',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'#444',marginBottom:'6px'}}>Call-out fee</div>
-              <div style={{fontSize:'1.15rem',fontWeight:700,color:'#1c1c1c',marginBottom:'20px',paddingBottom:'16px',borderBottom:'1px solid #e5e5e5'}}>$0 when work is commenced</div>
+              <div style={{fontSize:'1.15rem',fontWeight:700,color:'#1c1c1c',marginBottom:'20px',paddingBottom:'16px',borderBottom:'1px solid #e5e5e5'}}>$0 when work goes ahead*</div>
               <div style={{fontSize:'2.4rem',fontWeight:700,color:'#a4151a',letterSpacing:'-0.03em',lineHeight:1}}>
                 <sup style={{fontSize:'1.1rem',verticalAlign:'top',marginTop:'4px'}}>$</sup>0
               </div>
-              <div style={{fontSize:'0.8rem',color:'#444',margin:'4px 0 20px'}}>call-out fee when work proceeds on the day</div>
+              <div style={{fontSize:'0.8rem',color:'#444',margin:'4px 0 20px'}}>call-out fee on standard jobs</div>
               <ul style={{listStyle:'none',display:'flex',flexDirection:'column',gap:'9px',marginBottom:'14px'}}>
-                {['We come to you at no charge','Assess the job and quote in writing','You approve and we get started','No call-out fee charged when work is commenced'].map((item,i)=>(
+                {['We come to you and assess the job','Assess the job and quote in writing','You approve and we get started','No call-out fee when the work goes ahead'].map((item,i)=>(
                   <li key={i} style={{fontSize:'0.875rem',color:'#444',display:'flex',gap:'9px',alignItems:'flex-start'}}>
                     <span style={{color:'#a4151a',fontWeight:700,flexShrink:0}}>✓</span>{item}
                   </li>
                 ))}
               </ul>
-              <p style={{fontSize:'0.75rem',color:'#555',lineHeight:1.5,marginBottom:'16px'}}>Small assessment fee may apply if you choose not to proceed. We will always tell you upfront.</p>
+              <p style={{fontSize:'0.75rem',color:'#555',lineHeight:1.5,marginBottom:'16px'}}>*Standard jobs when work goes ahead. <a href="/terms" style={{color:'#555'}}>T&amp;Cs apply</a>.</p>
               <a href="#contact" className="btn btn--red" style={{width:'100%',justifyContent:'center'}}>Get a free quote</a>
             </div>
 

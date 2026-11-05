@@ -13,7 +13,7 @@ export default function PriceBeat() {
           Get a free quote to compare
         </a>
         <p style={{fontSize:'0.75rem',color:'rgba(255,255,255,0.3)',marginTop:'16px',lineHeight:1.6}}>
-          * Price beat applies to like-for-like written quotes from licensed and insured plumbers for the same scope of work within Greater Sydney. Quote must be presented prior to work commencing. Excludes promotional or loss-leader pricing.
+          * Price beat applies to like-for-like written quotes from licensed and insured plumbers for the same scope of work within our service area. Quote must be presented prior to work commencing. Excludes promotional or loss-leader pricing.
         </p>
       </div>
     </div>

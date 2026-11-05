@@ -68,13 +68,14 @@ export default function Hero() {
           </div>
 
           <div style={{display:'flex',flexWrap:'wrap',gap:'20px',alignItems:'center',marginTop:'32px',paddingTop:'24px',borderTop:'1px solid #e5e5e5'}}>
-            {['Fixed itemised quote first','$0 call-out fee on quoted jobs','Licensed and fully insured','Same-day, 24/7 emergencies'].map((item,i)=>(
+            {['Fixed itemised quote first','$0 call-out on standard jobs*','Licensed and fully insured','Same-day, 24/7 emergencies'].map((item,i)=>(
               <div key={i} style={{display:'flex',alignItems:'center',gap:'7px',fontSize:'0.82rem',fontWeight:600,color:'#444'}}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a4151a" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 {item}
               </div>
             ))}
           </div>
+          <p style={{fontSize:'0.72rem',color:'#888',marginTop:'10px'}}>*Standard jobs when work goes ahead. <a href="/terms" style={{color:'#888'}}>T&amp;Cs apply</a>.</p>
         </div>
       </section>
     </>
