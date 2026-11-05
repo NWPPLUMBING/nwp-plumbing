@@ -1,5 +1,6 @@
 import QuoteStrip from '@/components/QuoteStrip'
 import { Service, AREA_SUBURBS } from '@/lib/services'
+import { SUBURB_LINKS } from '@/lib/suburbs'
 
 const tick = (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a4151a" strokeWidth="2.5" style={{flexShrink:0}}><polyline points="20 6 9 17 4 12"/></svg>
@@ -129,9 +130,13 @@ export default function ServicePage({ s }: { s: Service }) {
           <h2 style={{marginBottom:'10px'}}>Local to you</h2>
           <p style={{maxWidth:'640px',marginBottom:'16px'}}>Based in Liverpool, our team covers suburbs right across Sydney.</p>
           <div style={{display:'flex',flexWrap:'wrap',gap:'7px'}}>
-            {AREA_SUBURBS.map((a,i)=>(
-              <span key={i} style={{background:'#fff',border:'1.5px solid #e5e5e5',borderRadius:'100px',padding:'5px 14px',fontSize:'0.82rem',fontWeight:600,color:'#444'}}>{a}</span>
-            ))}
+            {AREA_SUBURBS.map((a,i)=>{
+              const href = SUBURB_LINKS[a]
+              const st = {background:'#fff',border:'1.5px solid #e5e5e5',borderRadius:'100px',padding:'5px 14px',fontSize:'0.82rem',fontWeight:600,color:'#444'}
+              return href
+                ? <a key={i} href={href} style={{...st,color:'#a4151a',borderColor:'#f5c0c0',textDecoration:'none'}}>{a}</a>
+                : <span key={i} style={st}>{a}</span>
+            })}
           </div>
           <div style={{fontSize:'clamp(1.2rem,2.5vw,1.6rem)',fontWeight:800,fontStyle:'italic',color:'#a4151a',margin:'14px 0 32px'}}>and everything in between</div>
           <div style={{background:'#1c1c1c',borderRadius:'14px',padding:'32px',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:'20px'}}>

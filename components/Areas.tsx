@@ -1,18 +1,12 @@
 import fs from 'fs'
 import path from 'path'
+import { SUBURB_LINKS } from '@/lib/suburbs'
 const suburbs = [
   'Parramatta','Liverpool','Blacktown','Penrith','Fairfield','Cabramatta','Bankstown',
   'Castle Hill','Rouse Hill','Mount Druitt','Hornsby','Ryde','Chatswood','Strathfield',
   'Burwood','Hurstville','Sydney CBD','Sutherland','Manly','Bondi',
 ]
-const suburbLinks: Record<string, string> = {
-  'Manly': '/plumber-manly',
-  'Frenchs Forest': '/plumber-frenchs-forest',
-  'Stanmore': '/plumber-stanmore',
-  'Strathfield': '/plumber-strathfield',
-  'Liverpool': '/plumber-liverpool',
-  'Bankstown': '/plumber-bankstown',
-}
+const suburbLinks = SUBURB_LINKS
 export default function Areas() {
   const settingsPath = path.join(process.cwd(), 'content/settings/main.json')
   const settings = JSON.parse(fs.readFileSync(settingsPath, 'utf-8'))

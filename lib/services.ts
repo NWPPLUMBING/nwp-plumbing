@@ -60,7 +60,7 @@ export const SERVICES: Record<string, Service> = {
     quoteIssue: 'Blocked drain',
     showZeroCallout: true,
     whatWeDoHeading: 'Blockages we clear',
-    whatWeDo: ['Blocked toilets', 'Blocked kitchen and bathroom sinks', 'Blocked showers and floor wastes', 'Blocked sewer lines', 'Stormwater and gutter drains', 'Recurring blockages and root intrusion'],
+    whatWeDo: ['Blocked toilets, sinks and showers', 'Blocked sewer and stormwater lines', 'Tree root intrusion', 'CCTV drain camera inspections', 'No-dig pipe relining', 'Recurring blockages'],
     body: 'A drain that keeps blocking usually has a cause underneath it, such as tree roots, a broken pipe or a sag in the line. We tell you what we find and give you the options with prices, so you can decide.',
     photo: { src: '/images/work/NWP-drain-cleaning.jpg', alt: 'NWP Plumbing clearing a blocked drain' },
     reviews: [R.glenn, R.helen, R.janelle],
