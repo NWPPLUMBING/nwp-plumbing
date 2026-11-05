@@ -58,6 +58,10 @@ export default function QuoteStrip() {
           value: 1.0,
           currency: 'AUD',
         })
+        ;(window as any).gtag('event', 'generate_lead', { form: 'quote' })
+      }
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead')
       }
       setStatus('done')
     } catch {

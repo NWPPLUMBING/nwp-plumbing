@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SideContacts from '@/components/SideContacts'
 import StickyCall from '@/components/StickyCall'
+import CallTracking from '@/components/CallTracking'
 
 export const metadata: Metadata = {
   title: 'Licensed Plumber Greater Sydney | Fixed Upfront Pricing | NWP Plumbing',
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Footer />
         <SideContacts />
         <StickyCall />
+        <CallTracking />
       </body>
     </html>
   )

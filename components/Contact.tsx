@@ -32,6 +32,9 @@ export default function Contact() {
             currency: 'AUD',
           })
         }
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'generate_lead', { form: 'contact' })
+        }
         if (typeof window !== 'undefined' && (window as any).fbq) {
           (window as any).fbq('track', 'Lead')
         }
