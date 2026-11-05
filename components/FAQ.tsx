@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: 'Are you a licensed plumber near me?',
-    a: 'Yes. NWP Plumbing is fully licensed and insured. Based in Liverpool, our team covers Sydney within 30 km of Parramatta: Western Sydney, the Hills, the Inner West, the North Shore, the Northern Beaches, the Eastern Suburbs and the CBD. We are on the road daily, and every job comes with our lifetime workmanship guarantee.',
+    a: 'Yes. NWP Plumbing is fully licensed and insured. Based in Liverpool, our team covers Parramatta, Penrith, Blacktown, the Hills, Hornsby, Chatswood, the CBD, Bondi, Manly, Sutherland and everything in between. We are on the road daily, and every job comes with our lifetime workmanship guarantee.',
   },
   {
     q: 'Do you do hot water system replacement in Sydney?',

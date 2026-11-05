@@ -1,10 +1,9 @@
 import fs from 'fs'
 import path from 'path'
 const suburbs = [
-  'Manly','Balgowlah','Frenchs Forest','Cremorne','Stanmore','Enmore',
-  'Strathfield','Liverpool','Bankstown','Milperra','Fairfield','Eastern Creek',
-  'Northern Beaches','Inner West','North Shore','Eastern Suburbs','Sydney CBD',
-  'Hills District','Sutherland Shire','Western Sydney','Parramatta','Blacktown',
+  'Parramatta','Liverpool','Blacktown','Penrith','Fairfield','Cabramatta','Bankstown',
+  'Castle Hill','Rouse Hill','Mount Druitt','Hornsby','Ryde','Chatswood','Strathfield',
+  'Burwood','Hurstville','Sydney CBD','Sutherland','Manly','Bondi',
 ]
 const suburbLinks: Record<string, string> = {
   'Manly': '/plumber-manly',
@@ -29,7 +28,7 @@ export default function Areas() {
             <span className="eyebrow">Where we work</span>
             <h2>Licensed plumber near you, across Sydney</h2>
             <p style={{marginTop:'10px',maxWidth:'500px'}}>
-              Based in Liverpool, our team covers Sydney within 30 km of Parramatta: Western Sydney, the Hills, the Inner West, the North Shore, the Northern Beaches, the Eastern Suburbs and the CBD. Not sure if we cover your suburb? Just give us a call.
+              Based in Liverpool, our team covers suburbs right across Sydney. Not sure if we cover yours? Just give us a call.
             </p>
             <div style={{display:'flex',flexWrap:'wrap',gap:'7px',marginTop:'16px'}}>
               {suburbs.map((suburb,i)=>{
@@ -42,6 +41,7 @@ export default function Areas() {
                 )
               })}
             </div>
+            <div style={{fontSize:'clamp(1.2rem,2.5vw,1.6rem)',fontWeight:800,fontStyle:'italic',color:'#a4151a',marginTop:'14px'}}>and everything in between</div>
           </div>
           <div style={{background:'#1c1c1c',borderRadius:'14px',padding:'28px'}}>
             <h3 style={{color:'#fff',marginBottom:'6px'}}>Get in touch fast</h3>

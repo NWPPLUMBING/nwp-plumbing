@@ -39,7 +39,7 @@ const sections: { h: string; p: string[] }[] = [
   {
     h: 'Service area',
     p: [
-      'We are based in Liverpool and cover Sydney within 30 km of Parramatta. Not sure if we cover your suburb? Call us on 0477 160 911.',
+      'We are based in Liverpool and cover suburbs across Sydney. Not sure if we cover your suburb? Call us on 0477 160 911.',
     ],
   },
   {

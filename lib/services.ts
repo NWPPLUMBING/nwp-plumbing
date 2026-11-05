@@ -1,9 +1,6 @@
 // Content for the service landing pages (/blocked-drains, /hot-water, etc.)
 // Reviews are copied word for word from NWP Plumbing's Google Business Profile.
 
-export const GOOGLE_RATING = '5.0'
-export const GOOGLE_REVIEW_COUNT = 18
-
 export type Review = { name: string; text: string }
 
 const R: Record<string, Review> = {
@@ -41,7 +38,7 @@ export const SERVICES: Record<string, Service> = {
   'emergency-plumber': {
     slug: 'emergency-plumber',
     title: 'Emergency Plumber Sydney, 24/7 | NWP Plumbing',
-    description: '24/7 emergency plumber within 30 km of Parramatta. Burst pipes, major leaks, blocked toilets, no hot water. Fixed quote before we start. Call 0477 160 911.',
+    description: '24/7 emergency plumber across Sydney. Burst pipes, major leaks, blocked toilets, no hot water. Fixed quote before we start. Call 0477 160 911.',
     badge: 'On call 24/7',
     h1: 'Plumbing emergency?',
     h1Accent: 'Call now, day or night.',
@@ -55,7 +52,7 @@ export const SERVICES: Record<string, Service> = {
   'blocked-drains': {
     slug: 'blocked-drains',
     title: 'Blocked Drain Plumber Sydney | Fixed Price | NWP Plumbing',
-    description: 'Blocked drain, toilet, sink or sewer? Licensed plumber within 30 km of Parramatta. Fixed itemised quote before we start, same-day service. Call 0477 160 911.',
+    description: 'Blocked drain, toilet, sink or sewer? Licensed plumber across Sydney. Fixed itemised quote before we start, same-day service. Call 0477 160 911.',
     badge: 'Same-day service',
     h1: 'Blocked drain?',
     h1Accent: 'Fixed price before we start.',
@@ -71,7 +68,7 @@ export const SERVICES: Record<string, Service> = {
   'hot-water': {
     slug: 'hot-water',
     title: 'Hot Water Repairs & Replacement Sydney | NWP Plumbing',
-    description: 'No hot water? Repairs and replacement of electric, gas, solar and heat-pump systems within 30 km of Parramatta. Fixed price, same-day service. Call 0477 160 911.',
+    description: 'No hot water? Repairs and replacement of electric, gas, solar and heat-pump systems across Sydney. Fixed price, same-day service. Call 0477 160 911.',
     badge: 'Same-day service',
     h1: 'No hot water?',
     h1Accent: 'Repaired or replaced, same day.',
@@ -87,7 +84,7 @@ export const SERVICES: Record<string, Service> = {
   'burst-pipes-leaks': {
     slug: 'burst-pipes-leaks',
     title: 'Burst Pipe & Leak Repairs Sydney | NWP Plumbing',
-    description: 'Burst pipe or water leak? Licensed plumber on call 24/7 within 30 km of Parramatta. Fixed itemised quote before we start. Call 0477 160 911.',
+    description: 'Burst pipe or water leak? Licensed plumber on call 24/7 across Sydney. Fixed itemised quote before we start. Call 0477 160 911.',
     badge: 'On call 24/7',
     h1: 'Burst pipe or leak?',
     h1Accent: 'Fixed fast, priced upfront.',
@@ -102,7 +99,7 @@ export const SERVICES: Record<string, Service> = {
   'gas-fitting': {
     slug: 'gas-fitting',
     title: 'Licensed Gas Fitter Sydney | NWP Plumbing',
-    description: 'Licensed gas fitting within 30 km of Parramatta. Cooktops, heaters, BBQ points, gas hot water and leak repairs. Fixed price before we start. Call 0477 160 911.',
+    description: 'Licensed gas fitting across Sydney. Cooktops, heaters, BBQ points, gas hot water and leak repairs. Fixed price before we start. Call 0477 160 911.',
     badge: 'Licensed gas fitting',
     h1: 'Licensed gas fitter.',
     h1Accent: 'Fixed price before we start.',
@@ -117,7 +114,7 @@ export const SERVICES: Record<string, Service> = {
   'toilet-replacement': {
     slug: 'toilet-replacement',
     title: 'Toilet Replacement & Repairs Sydney | NWP Plumbing',
-    description: 'Toilet replacement, running or leaking toilets, cisterns and taps within 30 km of Parramatta. Fixed itemised quote, same-day service. Call 0477 160 911.',
+    description: 'Toilet replacement, running or leaking toilets, cisterns and taps across Sydney. Fixed itemised quote, same-day service. Call 0477 160 911.',
     badge: 'Same-day service',
     h1: 'New toilet?',
     h1Accent: 'Fixed price, done right.',
@@ -131,24 +128,24 @@ export const SERVICES: Record<string, Service> = {
   },
   'bathroom-renovations': {
     slug: 'bathroom-renovations',
-    title: 'Bathroom Renovation Plumber & Vanity Replacement Sydney | NWP Plumbing',
-    description: 'Vanity replacement and bathroom renovation plumbing within 30 km of Parramatta. Fixed itemised quote before we start. Call 0477 160 911.',
+    title: 'Bathroom Renovations & Vanity Replacement Sydney | NWP Plumbing',
+    description: 'Bathroom renovations and vanity replacement across Sydney. Fixed itemised quote before we start. Call 0477 160 911.',
     badge: 'Fixed itemised quotes',
-    h1: 'New vanity or bathroom reno?',
+    h1: 'Bathroom renovations.',
     h1Accent: 'Fixed itemised quote.',
-    intro: 'Vanity replacements and the plumbing for bathroom, kitchen and laundry renovations, from rough-in to fit-off. Every line item priced in writing first.',
+    intro: 'From a new vanity to a full bathroom renovation. Every line item priced in writing before we start.',
     quoteIssue: 'Reno or fit-off',
     showZeroCallout: true,
     whatWeDoHeading: 'Renovation work',
-    whatWeDo: ['Vanity replacement', 'Bathroom renovation plumbing', 'Rough-in and fit-off', 'Shower mixer and tapware upgrades', 'Kitchen and laundry renovations', 'Toilet and basin installation'],
-    body: 'Planning a renovation? Call us early. We can price the plumbing before you commit, so there are no surprises halfway through.',
+    whatWeDo: ['Bathroom renovations', 'Vanity replacement', 'Showers and tapware', 'Toilets and basins'],
+    body: 'Planning a renovation? Call us early and we will price it before you commit, so there are no surprises halfway through.',
     photo: { src: '/images/work/NWP-shower-mixer-conversion.jpg', alt: 'Shower mixer conversion by NWP Plumbing' },
     reviews: [R.suz, R.costa, R.janelle],
   },
   'water-filtration': {
     slug: 'water-filtration',
     title: 'Whole Home Water Filtration Sydney | NWP Plumbing',
-    description: 'Whole-home water filtration installed by a licensed plumber within 30 km of Parramatta. Fixed itemised quote, lifetime workmanship guarantee. Call 0477 160 911.',
+    description: 'Whole-home water filtration installed by a licensed plumber across Sydney. Fixed itemised quote, lifetime workmanship guarantee. Call 0477 160 911.',
     badge: 'Licensed installation',
     h1: 'Whole-home water filtration.',
     h1Accent: 'Clean water from every tap.',

@@ -1,5 +1,5 @@
 import QuoteStrip from '@/components/QuoteStrip'
-import { Service, GOOGLE_RATING, GOOGLE_REVIEW_COUNT, AREA_SUBURBS } from '@/lib/services'
+import { Service, AREA_SUBURBS } from '@/lib/services'
 
 const tick = (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a4151a" strokeWidth="2.5" style={{flexShrink:0}}><polyline points="20 6 9 17 4 12"/></svg>
@@ -38,7 +38,7 @@ export default function ServicePage({ s }: { s: Service }) {
             </h1>
             <div style={{display:'flex',alignItems:'center',gap:'8px',marginBottom:'14px',fontSize:'0.9rem',fontWeight:600,color:'#1c1c1c'}}>
               <span style={{color:'#f5a623',letterSpacing:'1px'}}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              {GOOGLE_RATING} from {GOOGLE_REVIEW_COUNT} Google reviews
+              5-star rated on Google
             </div>
             <p style={{fontSize:'1.02rem',lineHeight:1.65,marginBottom:'20px',maxWidth:'560px'}}>{s.intro}</p>
             <a href="tel:+61477160911" className="btn btn--red" style={{fontSize:'1.05rem',padding:'15px 26px'}}>
@@ -108,7 +108,7 @@ export default function ServicePage({ s }: { s: Service }) {
       {/* Reviews */}
       <section className="section">
         <div className="wrap">
-          <span className="eyebrow">{GOOGLE_RATING} from {GOOGLE_REVIEW_COUNT} Google reviews</span>
+          <span className="eyebrow">5-star rated on Google</span>
           <h2 style={{marginBottom:'20px'}}>What our customers say</h2>
           <div className="svc-reviews">
             {s.reviews.map((r,i)=>(
@@ -127,13 +127,13 @@ export default function ServicePage({ s }: { s: Service }) {
         <div className="wrap">
           <span className="eyebrow">Where we work</span>
           <h2 style={{marginBottom:'10px'}}>Local to you</h2>
-          <p style={{maxWidth:'640px',marginBottom:'16px'}}>Based in Liverpool, our team covers everywhere within 30 km of Parramatta, from Penrith to Bondi and Hornsby to Sutherland.</p>
-          <div style={{display:'flex',flexWrap:'wrap',gap:'7px',marginBottom:'32px'}}>
+          <p style={{maxWidth:'640px',marginBottom:'16px'}}>Based in Liverpool, our team covers suburbs right across Sydney.</p>
+          <div style={{display:'flex',flexWrap:'wrap',gap:'7px'}}>
             {AREA_SUBURBS.map((a,i)=>(
               <span key={i} style={{background:'#fff',border:'1.5px solid #e5e5e5',borderRadius:'100px',padding:'5px 14px',fontSize:'0.82rem',fontWeight:600,color:'#444'}}>{a}</span>
             ))}
-            <span style={{padding:'5px 4px',fontSize:'0.82rem',fontWeight:600,fontStyle:'italic',color:'#a4151a'}}>and everything in between</span>
           </div>
+          <div style={{fontSize:'clamp(1.2rem,2.5vw,1.6rem)',fontWeight:800,fontStyle:'italic',color:'#a4151a',margin:'14px 0 32px'}}>and everything in between</div>
           <div style={{background:'#1c1c1c',borderRadius:'14px',padding:'32px',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:'20px'}}>
             <div>
               <h2 style={{color:'#fff',fontSize:'1.4rem',marginBottom:'6px'}}>Ready to get it sorted?</h2>
