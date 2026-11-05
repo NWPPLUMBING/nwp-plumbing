@@ -45,6 +45,10 @@ export default function Hero() {
                 {hero.heading2}<br />
                 <span style={{color:'#a4151a'}}>{hero.heading3}</span>
               </h1>
+              <div style={{display:'flex',alignItems:'center',gap:'8px',marginBottom:'16px',fontSize:'0.95rem',fontWeight:600,color:'#1c1c1c'}}>
+                <span style={{color:'#f5a623',letterSpacing:'1px'}}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                5-star rated on Google
+              </div>
               <p style={{fontSize:'1.05rem',color:'#444',lineHeight:1.7,marginBottom:'24px',maxWidth:'560px'}}>
                 {hero.subtext}
               </p>
