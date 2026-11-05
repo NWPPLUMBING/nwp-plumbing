@@ -20,8 +20,9 @@ export default function ServicePage({ s }: { s: Service }) {
         .svc-cols { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
         .svc-reviews { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
         .svc-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        .svc-gallery { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; max-width:900px; }
         @media (max-width: 900px) {
-          .svc-hero, .svc-cols, .svc-reviews, .svc-steps { grid-template-columns:1fr; gap:20px; }
+          .svc-hero, .svc-cols, .svc-reviews, .svc-steps, .svc-gallery { grid-template-columns:1fr; gap:20px; }
           .svc-hero-pad { padding:24px 0 32px !important; }
         }
       `}</style>
@@ -73,17 +74,24 @@ export default function ServicePage({ s }: { s: Service }) {
             </ul>
             <p style={{lineHeight:1.7}}>{s.body}</p>
           </div>
-          {s.photo ? (
-            <img src={s.photo.src} alt={s.photo.alt} style={{width:'100%',borderRadius:'14px',border:'1px solid #e5e5e5',display:'block'}} />
-          ) : (
-            <div style={{background:'#1c1c1c',borderRadius:'14px',padding:'32px'}}>
-              <h3 style={{color:'#fff',marginBottom:'10px'}}>Talk to Nathan now</h3>
-              <p style={{color:'rgba(255,255,255,0.65)',marginBottom:'20px'}}>Tell us what is going on and we will give you a straight answer on what it needs and what it costs.</p>
-              <a href="tel:+61477160911" className="btn btn--red">📞 0477 160 911</a>
-            </div>
+          {s.photos[0] && (
+            <img src={s.photos[0].src} alt={s.photos[0].alt} style={{width:'100%',borderRadius:'14px',border:'1px solid #e5e5e5',display:'block'}} />
           )}
         </div>
       </section>
+
+      {s.photos.length > 1 && (
+        <section style={{padding:'0 0 56px'}}>
+          <div className="wrap">
+            <span className="eyebrow">Recent jobs</span>
+            <div className="svc-gallery">
+              {s.photos.slice(1).map((p,i)=>(
+                <img key={i} src={p.src} alt={p.alt} loading="lazy" style={{width:'100%',borderRadius:'14px',border:'1px solid #e5e5e5',display:'block'}} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* How the fixed quote works */}
       <section className="section section--alt">

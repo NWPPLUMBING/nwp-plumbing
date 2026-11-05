@@ -30,13 +30,14 @@ export type Service = {
   whatWeDoHeading: string
   whatWeDo: string[]
   body: string
-  photo?: { src: string; alt: string }
+  photos: { src: string; alt: string }[]
   reviews: Review[]
 }
 
 export const SERVICES: Record<string, Service> = {
   'emergency-plumber': {
     slug: 'emergency-plumber',
+    photos: [{ src: '/images/work/NWP-sewer-repairs-3.jpg', alt: 'Tree roots in a sewer pipe found by NWP Plumbing' }, { src: '/images/work/NWP-water-meter-repair.jpg', alt: 'Water meter repair before and after by NWP Plumbing' }, { src: '/images/work/NWP-sewer-repairs.jpg', alt: 'Sewer repair by NWP Plumbing' }],
     title: 'Emergency Plumber Sydney, 24/7 | NWP Plumbing',
     description: '24/7 emergency plumber across Sydney. Burst pipes, major leaks, blocked toilets, no hot water. Fixed quote before we start. Call 0477 160 911.',
     badge: 'On call 24/7',
@@ -51,6 +52,7 @@ export const SERVICES: Record<string, Service> = {
   },
   'blocked-drains': {
     slug: 'blocked-drains',
+    photos: [{ src: '/images/work/NWP-drain-cleaning.jpg', alt: 'NWP Plumbing clearing a blocked drain' }, { src: '/images/work/NWP-sewer-repairs-3.jpg', alt: 'Tree roots blocking a sewer pipe' }, { src: '/images/work/NWP-sewer-repairs-2.jpg', alt: 'Sewer line repair by NWP Plumbing' }],
     title: 'Blocked Drain Plumber Sydney | Fixed Price | NWP Plumbing',
     description: 'Blocked drain, toilet, sink or sewer? Licensed plumber across Sydney. Fixed itemised quote before we start, same-day service. Call 0477 160 911.',
     badge: 'Same-day service',
@@ -62,11 +64,11 @@ export const SERVICES: Record<string, Service> = {
     whatWeDoHeading: 'Blockages we clear',
     whatWeDo: ['Blocked toilets, sinks and showers', 'Blocked sewer and stormwater lines', 'Tree root intrusion', 'CCTV drain camera inspections', 'No-dig pipe relining', 'Recurring blockages'],
     body: 'A drain that keeps blocking usually has a cause underneath it, such as tree roots, a broken pipe or a sag in the line. We tell you what we find and give you the options with prices, so you can decide.',
-    photo: { src: '/images/work/NWP-drain-cleaning.jpg', alt: 'NWP Plumbing clearing a blocked drain' },
     reviews: [R.glenn, R.helen, R.janelle],
   },
   'hot-water': {
     slug: 'hot-water',
+    photos: [{ src: '/images/work/NWP-gas-continuous-flow.jpg', alt: 'Gas continuous flow hot water replacement by NWP Plumbing' }, { src: '/images/work/NWP-before-after-hotwater.jpg', alt: 'Hot water system before and after replacement by NWP Plumbing' }, { src: '/images/work/NWP-before-after-tank.jpg', alt: 'Hot water tank replacement before and after' }, { src: '/images/work/NWP-commercial-hotwater.jpg', alt: 'Commercial gas hot water system installed by NWP Plumbing' }],
     title: 'Hot Water Repairs & Replacement Sydney | NWP Plumbing',
     description: 'No hot water? Repairs and replacement of electric, gas, solar and heat-pump systems across Sydney. Fixed price, same-day service. Call 0477 160 911.',
     badge: 'Same-day service',
@@ -78,11 +80,11 @@ export const SERVICES: Record<string, Service> = {
     whatWeDoHeading: 'Hot water work',
     whatWeDo: ['Hot water repairs', 'Hot water system replacement', 'Electric, gas, solar and heat-pump systems', 'Leaking tanks and valves', 'Tempering valves', 'Upgrades to a bigger or more efficient system'],
     body: 'If your system is old or leaking from the tank, replacement is usually the better value. If it is a valve, element or thermostat, a repair may be all you need. Either way, you see the full price in writing before we start.',
-    photo: { src: '/images/work/NWP-before-after-hotwater.jpg', alt: 'Hot water system before and after replacement by NWP Plumbing' },
     reviews: [R.roisin, R.helen, R.costa],
   },
   'burst-pipes-leaks': {
     slug: 'burst-pipes-leaks',
+    photos: [{ src: '/images/work/NWP-water-meter-repair.jpg', alt: 'Water meter repair before and after by NWP Plumbing' }, { src: '/images/work/NWP-before-after.jpg', alt: 'Leak repair before and after by NWP Plumbing' }, { src: '/images/work/NWP-sewer-repairs.jpg', alt: 'Pipe repair by NWP Plumbing' }],
     title: 'Burst Pipe & Leak Repairs Sydney | NWP Plumbing',
     description: 'Burst pipe or water leak? Licensed plumber on call 24/7 across Sydney. Fixed itemised quote before we start. Call 0477 160 911.',
     badge: 'On call 24/7',
@@ -98,6 +100,7 @@ export const SERVICES: Record<string, Service> = {
   },
   'gas-fitting': {
     slug: 'gas-fitting',
+    photos: [{ src: '/images/work/NWP-commercial-hotwater.jpg', alt: 'Commercial gas hot water installation by NWP Plumbing' }, { src: '/images/work/NWP-gas-continuous-flow.jpg', alt: 'Gas continuous flow hot water replacement by NWP Plumbing' }],
     title: 'Licensed Gas Fitter Sydney | NWP Plumbing',
     description: 'Licensed gas fitting across Sydney. Cooktops, heaters, BBQ points, gas hot water and leak repairs. Fixed price before we start. Call 0477 160 911.',
     badge: 'Licensed gas fitting',
@@ -113,6 +116,7 @@ export const SERVICES: Record<string, Service> = {
   },
   'toilet-replacement': {
     slug: 'toilet-replacement',
+    photos: [{ src: '/images/work/NWP-toilet-replacement.jpg', alt: 'Toilet replacement before and after by NWP Plumbing' }, { src: '/images/work/NWP-vanity-replacement.jpg', alt: 'Vanity replacement before and after by NWP Plumbing' }],
     title: 'Toilet Replacement & Repairs Sydney | NWP Plumbing',
     description: 'Toilet replacement, running or leaking toilets, cisterns and taps across Sydney. Fixed itemised quote, same-day service. Call 0477 160 911.',
     badge: 'Same-day service',
@@ -128,6 +132,7 @@ export const SERVICES: Record<string, Service> = {
   },
   'bathroom-renovations': {
     slug: 'bathroom-renovations',
+    photos: [{ src: '/images/work/NWP-vanity-replacement.jpg', alt: 'Vanity replacement before and after by NWP Plumbing' }, { src: '/images/work/NWP-shower-mixer-conversion.jpg', alt: 'Shower mixer conversion by NWP Plumbing' }, { src: '/images/work/NWP-toilet-replacement.jpg', alt: 'Toilet replacement before and after by NWP Plumbing' }],
     title: 'Bathroom Renovations & Vanity Replacement Sydney | NWP Plumbing',
     description: 'Bathroom renovations and vanity replacement across Sydney. Fixed itemised quote before we start. Call 0477 160 911.',
     badge: 'Fixed itemised quotes',
@@ -139,11 +144,11 @@ export const SERVICES: Record<string, Service> = {
     whatWeDoHeading: 'Renovation work',
     whatWeDo: ['Bathroom renovations', 'Vanity replacement', 'Showers and tapware', 'Toilets and basins'],
     body: 'Planning a renovation? Call us early and we will price it before you commit, so there are no surprises halfway through.',
-    photo: { src: '/images/work/NWP-shower-mixer-conversion.jpg', alt: 'Shower mixer conversion by NWP Plumbing' },
     reviews: [R.suz, R.costa, R.janelle],
   },
   'water-filtration': {
     slug: 'water-filtration',
+    photos: [{ src: '/images/work/NWP-home-filtration.jpg', alt: 'Whole home water filtration system installed by NWP Plumbing' }, { src: '/images/work/NWP-filter-cartridge-before-after.jpg', alt: 'Filter cartridge before and after' }],
     title: 'Whole Home Water Filtration Sydney | NWP Plumbing',
     description: 'Whole-home water filtration installed by a licensed plumber across Sydney. Fixed itemised quote, lifetime workmanship guarantee. Call 0477 160 911.',
     badge: 'Licensed installation',
@@ -155,7 +160,6 @@ export const SERVICES: Record<string, Service> = {
     whatWeDoHeading: 'What is included',
     whatWeDo: ['Whole-home mains entry filtration', 'Multi-stage sediment and carbon filter', 'Chlorine and chloramine removal', 'Professional licensed installation', 'Pressure testing and system check', 'Filter cartridge replacement'],
     body: 'Sydney mains water is treated with chlorine and chloramines. A whole-home system reduces these at the point the water enters your home, so every tap benefits.',
-    photo: { src: '/images/work/NWP-home-filtration.jpg', alt: 'Whole home water filtration system installed by NWP Plumbing' },
     reviews: [R.dale, R.helen, R.costa],
   },
 }
