@@ -2,19 +2,20 @@
 import { useEffect, useRef, useState } from 'react'
 
  const reviews = [
-  {name:'Roisin Hayes',suburb:'Sydney',rating:5,text:'Amazing service and perfectly priced. Nathan arrived same day and on time. Have used him multiple times, highly recommend.',date:'July 2026'},
-  {name:'Jessica Mundey',suburb:'Sydney',rating:5,text:'NWP Plumbing was professional and prompt, reliable and transparent. Highly recommend!!',date:'July 2026'},
-  {name:'Linda Waltho',suburb:'Sydney',rating:5,text:'Excellent service! Arrived on time, fixed the issue quickly, and was professional throughout. Highly recommend!',date:'July 2026'},
-  {name:'Kim Treseder',suburb:'Sydney',rating:5,text:'Great and reliable service! Would definitely hire again!',date:'July 2026'},
+  {name:'Carlie Stephens',suburb:'Sydney',rating:5,text:'Absolute 10/10 service from Nathan. Called regarding a leaking shower and Nathan came out same day and fixed it. Would highly recommend such a friendly, knowledgeable and professional service and will definitely use again.',date:'September 2026'},
+  {name:'Tim Chalmers',suburb:'Sydney',rating:5,text:"I have used Nathan's expertise on a number of occasions. Nathan always has been on time, done a great job and never leaves a mess. He is friendly and approachable and I highly recommend him.",date:'September 2026'},
+  {name:'Roisin Hayes',suburb:'Sydney',rating:5,text:'Amazing service and perfectly priced. Nathan arrived same day and on time. Have used him multiple times, highly recommend',date:'July 2026'},
+  {name:'Jessica Mundey',suburb:'Sydney',rating:5,text:'NWP plumbing was professional and prompt, reliable and transparent. Highly recommend !!',date:'July 2026'},
+  {name:'Kim Treseder',suburb:'Sydney',rating:5,text:'Great and reliable service ! Would definitely hire again!',date:'July 2026'},
 {
-    name: 'Glenn T.',
+    name: 'Glenn Taylor',
     suburb: 'Sydney',
     rating: 5,
-    text: 'This guy\'s a legend. Had a problem, he came out same day and sorted it. Competitive price, highly recommend and will use again.',
+    text: 'This guys a legend. Had a problem he came out sameday and sorted it. Compeditve price, highly recommend and will use again',
     date: 'July 2026',
   },
  {
-    name: "Teddy",
+    name: "Racing Teddy",
     suburb: "Sydney",
     rating: 5,
     text: "NWP Plumbing was absolutely amazing. Nathan our plumbing was so nice, respectful and knew what he was talking about when looking at our noisy pipes. He ended up servicing all of our taps and gave us so much more pressure in our shower. Would 100% recommend.",
@@ -28,10 +29,10 @@ import { useEffect, useRef, useState } from 'react'
     date: "August 2026",
   },
   {
-    name: 'Helen C.',
+    name: 'Helen Cui',
     suburb: 'Sydney',
     rating: 5,
-    text: 'I found Nathan from the 5-star Google reviews and he deserves the high rating. His quotation was very transparent and he came promptly to fix plumbing issues another plumber failed to fix recently. Very clear communication, friendly and professional. Highly recommend, happy to add another 5 stars.',
+    text: 'I found Nathan from the 5* google reviews and he deserves the high rating. His quotation was very transparent, and came promptly to fix the plumbing issues that another plumber failed to fix recently. Very clear communication and very friendly and professionally Highly recommend! Happy to add another 5 stars',
     date: 'July 2026',
   },
 {
