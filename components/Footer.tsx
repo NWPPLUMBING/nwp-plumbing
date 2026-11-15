@@ -39,8 +39,8 @@ export default function Footer() {
 
           <div>
             <h4 style={{fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'#fff',marginBottom:'14px'}}>Service Area</h4>
-            {['Northern Beaches','Inner West','North Shore','Eastern Suburbs','Sydney CBD','Western Sydney','Parramatta','Blacktown'].map((item, i) => (
-              <a key={i} href="#contact" style={{display:'block',color:'rgba(255,255,255,0.55)',textDecoration:'none',fontSize:'0.875rem',marginBottom:'8px'}}>
+            {[['Liverpool','/plumber-liverpool'],['Fairfield','/plumber-fairfield'],['Bankstown','/plumber-bankstown'],['Parramatta','/plumber-parramatta'],['Blacktown','/plumber-blacktown'],['Penrith','/plumber-penrith'],['Strathfield','/plumber-strathfield'],['Inner West (Stanmore)','/plumber-stanmore'],['Castle Hill','/plumber-castle-hill'],['Hornsby','/plumber-hornsby'],['Frenchs Forest','/plumber-frenchs-forest'],['Northern Beaches (Manly)','/plumber-manly']].map(([item, href], i) => (
+              <a key={i} href={href} style={{display:'block',color:'rgba(255,255,255,0.55)',textDecoration:'none',fontSize:'0.875rem',marginBottom:'8px'}}>
                 {item}
               </a>
             ))}

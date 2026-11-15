@@ -4,7 +4,7 @@ import { SERVICES } from '@/lib/services'
 
 const s = SERVICES['hot-water']
 
-export const metadata: Metadata = { title: s.title, description: s.description }
+export const metadata: Metadata = { title: s.title, description: s.description, alternates: { canonical: 'https://nwpplumbing.com/hot-water' } }
 
 export default function Page() {
   return <ServicePage s={s} />

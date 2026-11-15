@@ -7,8 +7,23 @@ import StickyCall from '@/components/StickyCall'
 import CallTracking from '@/components/CallTracking'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nwpplumbing.com'),
+  alternates: { canonical: 'https://nwpplumbing.com/' },
   title: 'Licensed Plumber Greater Sydney | Fixed Upfront Pricing | NWP Plumbing',
   description: 'NWP Plumbing, licensed plumber near you across Greater Sydney. Blocked drains, hot water repair, burst pipes, gas fitting. Fixed itemised quote before we start. Same-day and 24/7 emergency. Call Nathan on 0477 160 911.',
+}
+
+const businessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Plumber',
+  name: 'NWP Plumbing',
+  legalName: 'NW Pro Plumbing Pty Ltd',
+  url: 'https://nwpplumbing.com',
+  telephone: '+61477160911',
+  address: { '@type': 'PostalAddress', addressLocality: 'Liverpool', addressRegion: 'NSW', postalCode: '2170', addressCountry: 'AU' },
+  areaServed: ['Liverpool', 'Fairfield', 'Bankstown', 'Parramatta', 'Blacktown', 'Penrith', 'Strathfield', 'Stanmore', 'Castle Hill', 'Hornsby', 'Frenchs Forest', 'Manly'].map(name => ({ '@type': 'Place', name: `${name} NSW` })),
+  openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '00:00', closes: '23:59' }],
+  hasCredential: { '@type': 'EducationalOccupationalCredential', credentialCategory: 'license', name: 'NSW plumbing licence 499323C' },
 }
 
 export default function RootLayout({
@@ -43,6 +58,7 @@ export default function RootLayout({
         `}}/>
       </head>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }} />
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }} alt=""
             src="https://www.facebook.com/tr?id=2144868019777764&ev=PageView&noscript=1" />

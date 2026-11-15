@@ -4,7 +4,7 @@ import { SERVICES } from '@/lib/services'
 
 const s = SERVICES['gas-fitting']
 
-export const metadata: Metadata = { title: s.title, description: s.description }
+export const metadata: Metadata = { title: s.title, description: s.description, alternates: { canonical: 'https://nwpplumbing.com/gas-fitting' } }
 
 export default function Page() {
   return <ServicePage s={s} />

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Terms & Conditions | NWP Plumbing',
   description: 'Call-out and assessment fees, quotes, Price Beat Guarantee and lifetime workmanship guarantee terms for NWP Plumbing.',
+  alternates: { canonical: 'https://nwpplumbing.com/terms' },
 }
 
 const sections: { h: string; p: string[] }[] = [

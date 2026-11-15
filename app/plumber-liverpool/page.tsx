@@ -7,6 +7,7 @@ const s = SUBURBS['liverpool']
 export const metadata: Metadata = {
   title: `Plumber ${s.name} | Fixed Price, 24/7 | NWP Plumbing`,
   description: `Licensed plumber in ${s.name}. Fixed itemised quote before we start, same-day service, 24/7 emergencies. Blocked drains, hot water, gas, leaks. Call 0477 160 911.`,
+  alternates: { canonical: 'https://nwpplumbing.com/plumber-liverpool' },
 }
 
 export default function Page() {
