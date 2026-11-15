@@ -60,7 +60,7 @@ export default function Filtration() {
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className="btn btn--red" style={{width:'100%',justifyContent:'center',fontSize:'1rem'}}>Book a free assessment</a>
+              <a href="#contact" className="btn btn--red" style={{width:'100%',justifyContent:'center',fontSize:'1rem'}}>Book an assessment</a>
             </div>
             <div style={{marginTop:'16px',background:'#f7f7f7',border:'1.5px solid #e5e5e5',borderRadius:'10px',padding:'20px 22px'}}>
               <div style={{fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.08em',color:'#444',marginBottom:'6px'}}>Why now?</div>

@@ -43,7 +43,7 @@ export const SERVICES: Record<string, Service> = {
     badge: 'On call 24/7',
     h1: 'Plumbing emergency?',
     h1Accent: 'Call now, day or night.',
-    intro: 'Burst pipe, flooding, blocked toilet or no hot water. Our team is on call 24/7 across Sydney, and you get a fixed price before any work starts, even after hours.',
+    intro: 'Burst pipe, flooding, blocked toilet or no hot water. Our team is on call 24/7 across Sydney, and you get a fixed price before any work starts, even after hours. An emergency call-out fee applies.',
     showZeroCallout: false,
     whatWeDoHeading: 'Emergencies we handle',
     whatWeDo: ['Burst and leaking pipes', 'Overflowing or blocked toilets', 'Blocked sewer and drains', 'No hot water', 'Gas leaks and gas appliance faults', 'Water shut-off and make-safe'],

@@ -20,7 +20,7 @@ export default function Pricing() {
               <div style={{fontSize:'1.4rem',fontWeight:700,color:'#a4151a',lineHeight:1.3,marginBottom:'8px'}}>Every job, every time</div>
               <div style={{fontSize:'0.8rem',color:'#444',marginBottom:'16px'}}>No work starts until you approve the price in writing</div>
               <ul style={{listStyle:'none',display:'flex',flexDirection:'column',gap:'9px'}}>
-                {['Full on-site assessment included','Every cost itemised clearly','No obligation, your choice','Price locked in before we start'].map((item,i)=>(
+                {['On-site assessment and written quote','Every cost itemised clearly','Assessment fee only if you don\'t go ahead','Price locked in before we start'].map((item,i)=>(
                   <li key={i} style={{fontSize:'0.875rem',color:'#444',display:'flex',gap:'9px',alignItems:'flex-start'}}>
                     <span style={{color:'#a4151a',fontWeight:700,flexShrink:0}}>✓</span>{item}
                   </li>
@@ -43,7 +43,7 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <p style={{fontSize:'0.75rem',color:'#555',lineHeight:1.5,marginBottom:'16px'}}>*Standard jobs when work goes ahead. <a href="/terms" style={{color:'#555'}}>T&amp;Cs apply</a>.</p>
+              <p style={{fontSize:'0.75rem',color:'#555',lineHeight:1.5,marginBottom:'16px'}}>*Standard jobs when work goes ahead. Emergency call-outs $185. <a href="/terms" style={{color:'#555'}}>T&amp;Cs apply</a>.</p>
               <a href="#contact" className="btn btn--red" style={{width:'100%',justifyContent:'center'}}>Get a free quote</a>
             </div>
 

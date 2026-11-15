@@ -79,7 +79,7 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <p style={{fontSize:'0.72rem',color:'#888',marginTop:'10px'}}>*Standard jobs when work goes ahead. <a href="/terms" style={{color:'#888'}}>T&amp;Cs apply</a>.</p>
+          <p style={{fontSize:'0.72rem',color:'#888',marginTop:'10px'}}>*Standard jobs when work goes ahead. Emergency call-outs $185. <a href="/terms" style={{color:'#888'}}>T&amp;Cs apply</a>.</p>
         </div>
       </section>
     </>

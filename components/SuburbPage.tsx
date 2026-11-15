@@ -55,7 +55,7 @@ export default function SuburbPage({ s }: { s: Suburb }) {
                 <div key={i} style={{display:'flex',alignItems:'center',gap:'7px',fontSize:'0.84rem',fontWeight:600,color:'#444'}}>{tick}{t}</div>
               ))}
             </div>
-            <p style={{fontSize:'0.72rem',color:'#888',marginTop:'10px'}}>*Standard jobs when work goes ahead. <a href="/terms" style={{color:'#888'}}>T&amp;Cs apply</a>.</p>
+            <p style={{fontSize:'0.72rem',color:'#888',marginTop:'10px'}}>*Standard jobs when work goes ahead. Emergency call-outs $185. <a href="/terms" style={{color:'#888'}}>T&amp;Cs apply</a>.</p>
           </div>
           <div id="quote"><QuoteStrip /></div>
         </div>

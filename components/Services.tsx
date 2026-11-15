@@ -1,5 +1,5 @@
 const services = [
-  {title:'24/7 Emergency Plumber',desc:'Burst pipe, major leak or overflow that cannot wait? We are on call around the clock. You will get a clear price before work starts, even at 2am. No inflated after-hours rates.',cta:'Get help now'},
+  {title:'24/7 Emergency Plumber',desc:'Burst pipe, major leak or overflow that cannot wait? We are on call around the clock. You will get a clear price before work starts, even at 2am. Same job rates day or night. Emergency call-out fee applies.',cta:'Get help now'},
   {title:'Blocked Drains and Pipe Relining',desc:'Slow or fully blocked drain? We use CCTV camera inspection to find the real cause, then clear it with high-pressure water jetting. Where it makes sense, no-dig pipe relining fixes the problem without tearing up your yard or floors.',cta:'Book a drain clear'},
   {title:'Hot Water Repair and Replacement',desc:'No hot water? We repair or replace fast. Electric, gas, solar and heat-pump hot water systems. Ask us about government rebates on heat-pump upgrades that can cover a large chunk of the install cost.',cta:'Fix my hot water'},
   {title:'Burst Pipes and Leaks',desc:'A slow leak costs you hundreds in water bills before you notice it. A burst pipe can wreck a home in hours. We find and fix leaks fast, with a written quote before any pipe gets touched.',cta:'Stop the leak'},

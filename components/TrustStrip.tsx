@@ -34,6 +34,7 @@ export default function TrustStrip() {
             </div>
           ))}
         </div>
+        <p className="wrap" style={{fontSize:'0.7rem',color:'rgba(255,255,255,0.5)',marginTop:'8px',textAlign:'center'}}>*Standard jobs when work goes ahead. Emergency call-outs $185. <a href="/terms" style={{color:'rgba(255,255,255,0.5)'}}>T&amp;Cs apply</a>.</p>
       </div>
     </>
   )
